@@ -1,0 +1,11 @@
+__pycache__
+.idea
+.vscode
+.mypy_cache
+.pytest_cache/
+
+yanic_pb2*
+.hypothesis/
+openapi.json
+yanic.pyz
+prod.mk
