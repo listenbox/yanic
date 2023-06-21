@@ -1,12 +1,13 @@
 [tool.poetry]
-authors = []
-description = ""
+authors = ["Listenbox <hello@listenbox.app>"]
+description = "async yt-dlp server"
 name = "yanic"
 version = "1.0.0"
 
 [tool.poetry.dependencies]
+python = "^3.8"
+
 blacksheep = "^1.2.17"
-python = "^3.10.0"
 uvicorn = "^0.22.0"
 yt-dlp = "~2023.3.4"
 
