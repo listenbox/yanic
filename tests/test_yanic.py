@@ -32,7 +32,7 @@ def server() -> int:
 @pytest.fixture(scope='module')
 async def client(server) -> ClientSession:
     async with ClientSession(f"http://localhost:{server}") as sess:
-        for _ in range(5):
+        for _ in range(10):
             try:
                 await sess.get("/health")
                 break
