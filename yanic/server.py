@@ -77,4 +77,4 @@ app.middlewares.append(_log_res_time)
 
 def main() -> None:
     port = int(os.environ.get('PORT', '8006'))
-    uvicorn.run(app, port=port, limit_max_requests=100_000, access_log=False, log_level=logging.INFO)
+    uvicorn.run(app, port=port, limit_max_requests=1_000_000_000, access_log=False, log_level=logging.INFO)
