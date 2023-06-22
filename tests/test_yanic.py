@@ -139,6 +139,13 @@ async def test_download(responsible, tmp_path: str):
 
 
 @pytest.mark.asyncio_cooperative
+async def test_info_no_url(responsible):
+    await responsible.check(RRequest("GET", "/info"), status=400)
+    await responsible.check(RRequest("POST", "/info"), status=400)
+    await responsible.check(RRequest("POST", "/info", json={}), status=400)
+
+
+@pytest.mark.asyncio_cooperative
 async def test_playlist_not_found(responsible):
     req = RRequest(
         "POST",
