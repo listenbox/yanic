@@ -118,7 +118,8 @@ async def test_invalid_download(responsible):
 
 
 @pytest.mark.asyncio_cooperative
-async def test_download(responsible, tmp_path: str):
+async def test_download(tmp_path_factory, responsible):
+    tmp_path = tmp_path_factory.mktemp("tmp")
     resp = await responsible.check(
         RRequest(
             "POST",
