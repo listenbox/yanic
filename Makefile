@@ -30,3 +30,8 @@ deploy: tests build
 .PHONY: logs
 logs:
 	@$(MAKE) -f prod.mk logs
+
+.PHONY: reinstall-poetry
+reinstall-poetry:
+	curl -sSL https://install.python-poetry.org | python3 - --uninstall
+	curl -sSL https://install.python-poetry.org | python3 -
