@@ -38,7 +38,7 @@ async def responsible(
         status: int,
 ) -> aiohttp.ClientResponse:
     async with session.request(req.method, req.path, headers=req.headers, json=req.json) as res:
-        assert res.status == status
+        assert res.status == status, f"expected {status} but got {res.status}"
 
         res_schema = find_response_schema(open_api, req.path, req.method, status)
 
