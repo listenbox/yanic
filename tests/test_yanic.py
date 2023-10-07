@@ -56,6 +56,7 @@ def info_opts(ext: str, proxy: Optional[str] = None):
     return {
         "format": f"bestaudio[ext={ext}]/best[ext={ext}]",
         "proxy": proxy,
+        "extractor_retries": 0,
     }
 
 
@@ -64,6 +65,7 @@ def playlist_opts(proxy: Optional[str] = None, limit: int = 500):
         "proxy": proxy,
         "extract_flat": "in_playlist",
         "playlistend": limit,
+        "extractor_retries": 0,
     }
 
 
@@ -81,6 +83,7 @@ def download_opts(file: str, proxy: Optional[str] = None):
         "outtmpl": file,
         "max_downloads": 1,
         "proxy": proxy,
+        "extractor_retries": 0,
     }
 
 
