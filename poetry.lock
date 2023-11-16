@@ -1078,6 +1078,27 @@ files = [
 ]
 
 [[package]]
+name = "requests"
+version = "2.31.0"
+description = "Python HTTP for Humans."
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "requests-2.31.0-py3-none-any.whl", hash = "sha256:58cd2187c01e70e6e26505bca751777aa9f2ee0b7f4300988b709f44e013003f"},
+    {file = "requests-2.31.0.tar.gz", hash = "sha256:942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"},
+]
+
+[package.dependencies]
+certifi = ">=2017.4.17"
+charset-normalizer = ">=2,<4"
+idna = ">=2.5,<4"
+urllib3 = ">=1.21.1,<3"
+
+[package.extras]
+socks = ["PySocks (>=1.5.6,!=1.5.7)"]
+use-chardet-on-py3 = ["chardet (>=3.0.2,<6)"]
+
+[[package]]
 name = "rodi"
 version = "1.1.3"
 description = "Implementation of dependency injection for Python 3"
@@ -1154,14 +1175,30 @@ files = [
 ]
 
 [[package]]
+name = "urllib3"
+version = "2.1.0"
+description = "HTTP library with thread-safe connection pooling, file post, and more."
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "urllib3-2.1.0-py3-none-any.whl", hash = "sha256:55901e917a5896a349ff771be919f8bd99aff50b79fe58fec595eb37bbc56bb3"},
+    {file = "urllib3-2.1.0.tar.gz", hash = "sha256:df7aa8afb0148fa78488e7899b2c59b5f4ffcfa82e6c54ccb9dd37c1d7b52d54"},
+]
+
+[package.extras]
+brotli = ["brotli (>=1.0.9)", "brotlicffi (>=0.8.0)"]
+socks = ["pysocks (>=1.5.6,!=1.5.7,<2.0)"]
+zstd = ["zstandard (>=0.18.0)"]
+
+[[package]]
 name = "uvicorn"
-version = "0.23.2"
+version = "0.24.0.post1"
 description = "The lightning-fast ASGI server."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "uvicorn-0.23.2-py3-none-any.whl", hash = "sha256:1f9be6558f01239d4fdf22ef8126c39cb1ad0addf76c40e760549d2c2f43ab53"},
-    {file = "uvicorn-0.23.2.tar.gz", hash = "sha256:4d3cc12d7727ba72b64d12d3cc7743124074c0a69f7b201512fc50c3e3f1569a"},
+    {file = "uvicorn-0.24.0.post1-py3-none-any.whl", hash = "sha256:7c84fea70c619d4a710153482c0d230929af7bcf76c7bfa6de151f0a3a80121e"},
+    {file = "uvicorn-0.24.0.post1.tar.gz", hash = "sha256:09c8e5a79dc466bdf28dead50093957db184de356fcdc48697bad3bde4c2588e"},
 ]
 
 [package.dependencies]
@@ -1364,24 +1401,26 @@ multidict = ">=4.0"
 
 [[package]]
 name = "yt-dlp"
-version = "2023.10.13"
+version = "2023.11.16"
 description = "A youtube-dl fork with additional features and patches"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "yt-dlp-2023.10.13.tar.gz", hash = "sha256:e026ea1c435ff36eef1215bc4c5bb8c479938b90054997ba99f63a4541fe63b4"},
-    {file = "yt_dlp-2023.10.13-py2.py3-none-any.whl", hash = "sha256:2b069f22675532eebacdfd6372b1825651a751fef848de9ae6efe6491b2dc38a"},
+    {file = "yt-dlp-2023.11.16.tar.gz", hash = "sha256:f0ccdaf12e08b15902601a4671c7ab12906d7b11de3ae75fa6506811c24ec5da"},
+    {file = "yt_dlp-2023.11.16-py2.py3-none-any.whl", hash = "sha256:0322ba85aa4afdb75f8641ed550e5958964daff034aeb477abb15031fd9a51ed"},
 ]
 
 [package.dependencies]
-brotli = {version = "*", markers = "platform_python_implementation == \"CPython\""}
-brotlicffi = {version = "*", markers = "platform_python_implementation != \"CPython\""}
+brotli = {version = "*", markers = "implementation_name == \"cpython\""}
+brotlicffi = {version = "*", markers = "implementation_name != \"cpython\""}
 certifi = "*"
 mutagen = "*"
 pycryptodomex = "*"
+requests = ">=2.31.0,<3"
+urllib3 = ">=1.26.17,<3"
 websockets = "*"
 
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8"
-content-hash = "5855b2ef4364fbabde44ee0575402e9b854e9147d961350942724f6db80c82c8"
+content-hash = "4c01b72617fa814143b8fc7e1322bdf845c4c38a5ebb17933f727fd84c15ea7f"
