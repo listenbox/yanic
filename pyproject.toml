@@ -5,7 +5,7 @@ name = "yanic"
 version = "1.0.0"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.10"
 
 blacksheep = "^1.2.17"
 uvicorn = "^0.24.0.post1"
