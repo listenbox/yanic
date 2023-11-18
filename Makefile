@@ -17,7 +17,7 @@ openapi.json: yanic.kdl
 
 .PHONY: build
 build:
-	poetry run shiv . --reproducible --compressed -p '/usr/bin/python3 -sE' -e yanic.server:main -o yanic.pyz --only-binary=:all: --platform manylinux2014_x86_64
+	poetry run shiv . --reproducible --compressed -p '/usr/bin/python3 -sE' -e yanic.server:main -o yanic.pyz --only-binary=:all: --platform manylinux2014_x86_64 --python-version 3.10
 
 .PHONY: schemathesis
 schemathesis: openapi.json
