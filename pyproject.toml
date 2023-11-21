@@ -19,8 +19,10 @@ aiohttp = "^3.8.1"
 pytest = "^7.4.0"
 pytest-asyncio-cooperative = "^0.31.0"
 # schemathesis = "^3.19.5"
-shiv = "^1.0.3"
 validators = "^0.22.0"
+
+[tool.poetry.group.build.dependencies]
+shiv = "^1.0.3"
 
 [tool.poetry.scripts]
 server = "yanic.server:main"

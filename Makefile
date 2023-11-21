@@ -17,7 +17,7 @@ openapi.json: yanic.kdl
 
 .PHONY: build
 build:
-	poetry run shiv . --reproducible --compressed -p '/usr/bin/python3 -sE' -e yanic.server:main -o yanic.pyz --only-binary=:all: --platform manylinux2014_x86_64 --python-version 3.10
+	./host.sh
 
 .PHONY: schemathesis
 schemathesis: openapi.json
@@ -30,8 +30,3 @@ deploy: tests build
 .PHONY: logs
 logs:
 	@$(MAKE) -f prod.mk logs
-
-.PHONY: reinstall-poetry
-reinstall-poetry:
-	curl -sSL https://install.python-poetry.org | python3 - --uninstall
-	curl -sSL https://install.python-poetry.org | python3 -

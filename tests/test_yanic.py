@@ -66,6 +66,7 @@ def playlist_opts(proxy: Optional[str] = None, limit: int = 500):
         "extract_flat": "in_playlist",
         "playlistend": limit,
         "extractor_retries": 0,
+        "extractor_args": {"youtubetab": {"approximate_date": "True"}},
     }
 
 
@@ -175,4 +176,7 @@ async def test_smallest_playlist(responsible):
     )
     resp = await responsible.check(req, status=200)
     b = await resp.json()
-    assert len(b['entries']) == 2
+
+    entries = b['entries']
+    assert len(entries) == 2
+    assert all(isinstance(x['timestamp'], int) for x in entries)
