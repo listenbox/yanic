@@ -8,6 +8,7 @@ start:
 
 .PHONY: poetry
 poetry:
+	poetry lock
 	poetry show --outdated
 	poetry update
 	poetry install --sync
