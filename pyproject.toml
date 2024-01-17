@@ -8,7 +8,7 @@ version = "1.0.0"
 python = "^3.10"
 
 blacksheep = "1.2.18"
-uvicorn = "^0.25"
+uvicorn = "^0.26.0"
 yt-dlp = "^2023.06.22"
 # because uvicorn:    https://github.com/encode/uvicorn/blob/master/uvicorµn/_types.py
 # because blacksheep: https://github.com/Neoteroi/BlackSheep/blob/main/blacksheep/asgi.pyi
