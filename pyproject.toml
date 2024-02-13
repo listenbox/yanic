@@ -10,14 +10,14 @@ python = "^3.10"
 blacksheep = "1.2.18"
 uvicorn = "^0.27.0"
 yt-dlp = "^2023.06.22"
-# because uvicorn:    https://github.com/encode/uvicorn/blob/master/uvicorµn/_types.py
+# because uvicorn:    https://github.com/encode/uvicorn/blob/master/uvicorn/_types.py
 # because blacksheep: https://github.com/Neoteroi/BlackSheep/blob/main/blacksheep/asgi.pyi
 typing-extensions = "^4.7.1"
 
 [tool.poetry.group.dev.dependencies]
 aiohttp = "^3.8.1"
 pytest = "^8.0.0"
-pytest-asyncio-cooperative = "^0.34.0"
+pytest-asyncio-cooperative = "^0.35.0"
 # schemathesis = "^3.19.5"
 validators = "^0.22.0"
 
