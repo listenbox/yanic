@@ -142,24 +142,23 @@ tests-no-zope = ["attrs[tests-mypy]", "cloudpickle", "hypothesis", "pympler", "p
 
 [[package]]
 name = "blacksheep"
-version = "1.2.18"
+version = "1.2.20"
 description = "Fast web framework for Python asyncio"
 optional = false
 python-versions = "*"
 files = [
-    {file = "blacksheep-1.2.18-cp310-cp310-macosx_11_0_x86_64.whl", hash = "sha256:14412ad79c0cacad3534a5f54feddaffa1283bee24ce5306e02fe029984eaf85"},
-    {file = "blacksheep-1.2.18-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:3b11672885ae5b195bd4dc685e553fd6078e2b6cb29f08239aba7d677a679893"},
-    {file = "blacksheep-1.2.18-cp310-cp310-win_amd64.whl", hash = "sha256:db6b1455910025d65093b0b0b312a1fcd37ee06310d4b8a0434dbc8e1344e67b"},
-    {file = "blacksheep-1.2.18-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:75d11454a34abdda2f0e41dfb3e6438dc57339f93c7f09358b5ca9ef5df806b0"},
-    {file = "blacksheep-1.2.18-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:df7a43b15059312f4394caf926ca1dbd61b624339f7a22802907bc6ce0f3c70e"},
-    {file = "blacksheep-1.2.18-cp311-cp311-win_amd64.whl", hash = "sha256:7fd9c9b2104ce1e95e42b582c3f0194425e3d3e1a13176ac8e6c38d1e4bea82f"},
-    {file = "blacksheep-1.2.18-cp38-cp38-macosx_11_0_x86_64.whl", hash = "sha256:8360e1251ea7a9ba025d1542b31c066db5f5c3e13df384ba0ef0f5606715aecc"},
-    {file = "blacksheep-1.2.18-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:d733d4d9017ff57e618111c4cc6ad1a9a2ca23d62ccfa9dbbb9816117afffea2"},
-    {file = "blacksheep-1.2.18-cp38-cp38-win_amd64.whl", hash = "sha256:7deee8774ea68c586193d7b0c1d9feea109dc018e88223cc5032900b4255d5b4"},
-    {file = "blacksheep-1.2.18-cp39-cp39-macosx_11_0_x86_64.whl", hash = "sha256:f2427c6f0be6eccbf9ebddcec450da2b78b944a4a7ccd756bbe1ea0ae7f6cdd2"},
-    {file = "blacksheep-1.2.18-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:fb8a951829bce23476386a2adea3e6de41cc22ddb5635a43453fc2dc91e9209b"},
-    {file = "blacksheep-1.2.18-cp39-cp39-win_amd64.whl", hash = "sha256:8fb8656776e370b52e26ab0b873abbadd6ca64e6fda610728aa58b328674387a"},
-    {file = "blacksheep-1.2.18.tar.gz", hash = "sha256:50cf71512b1e071cc32a183f97bbdcaf5b34f39e4f86015d3d3d717c2a127952"},
+    {file = "blacksheep-1.2.20-cp310-cp310-macosx_11_0_x86_64.whl", hash = "sha256:fa57abe3ded9dca778659d5523aeecec75531fa74322cd7f5ae8de316c4a5aaa"},
+    {file = "blacksheep-1.2.20-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:188fb88b2c7a260d72d2965a02692debc3caf67b3bc167a98e232d0bd36baaae"},
+    {file = "blacksheep-1.2.20-cp310-cp310-win_amd64.whl", hash = "sha256:bbe28efbfa4a496618af790cb4947aab834da577cb5cccecd4ea8d22f4047aeb"},
+    {file = "blacksheep-1.2.20-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:e302efc88f2fc592fd202e99f83b2614384943a525f8cd6a3a5cc564e71cdf78"},
+    {file = "blacksheep-1.2.20-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:17bcf4fddd17768a45cacf3d88919fc81baa5ffc8811733052456c683d8225b4"},
+    {file = "blacksheep-1.2.20-cp311-cp311-win_amd64.whl", hash = "sha256:9bf5e8249b7d94adc053a76e5ce43036fb3f725e0934f18ff5c00127efb46329"},
+    {file = "blacksheep-1.2.20-cp38-cp38-macosx_11_0_x86_64.whl", hash = "sha256:e38a4a800a866d8fa00041431886730fe4de6958bbc9984bf401b7ec41c41f89"},
+    {file = "blacksheep-1.2.20-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:fddc73f1c14782862f010baa3bbe66c21d9a36e50e919a2d785cf0435b187e7c"},
+    {file = "blacksheep-1.2.20-cp38-cp38-win_amd64.whl", hash = "sha256:d7954ab44ded25e91afdac06e28ec800f9e9f83a09555564666023eec6231c5b"},
+    {file = "blacksheep-1.2.20-cp39-cp39-macosx_11_0_x86_64.whl", hash = "sha256:8d027da05118e75872809b9492b793f64f83365dfe472fbdbed2fe4a8607222e"},
+    {file = "blacksheep-1.2.20-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:53bc843c1e07f527a44b9edfdf6cb8496730308b9a15d4212c10051bfae3fe97"},
+    {file = "blacksheep-1.2.20-cp39-cp39-win_amd64.whl", hash = "sha256:a918c8955b18b7a846a03735bf72d361190f1c04b6463bbe56b51d862f6d04e6"},
 ]
 
 [package.dependencies]
@@ -926,13 +925,13 @@ files = [
 
 [[package]]
 name = "packaging"
-version = "23.2"
+version = "24.0"
 description = "Core utilities for Python packages"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "packaging-23.2-py3-none-any.whl", hash = "sha256:8c491190033a9af7e1d931d0b5dacc2ef47509b34dd0de67ed209b5203fc88c7"},
-    {file = "packaging-23.2.tar.gz", hash = "sha256:048fb0e9405036518eaaf48a55953c750c11e1a1b68e0dd1a9d62ed0c092cfc5"},
+    {file = "packaging-24.0-py3-none-any.whl", hash = "sha256:2ddfb553fdf02fb784c234c7ba6ccc288296ceabec964ad2eae3777778130bc5"},
+    {file = "packaging-24.0.tar.gz", hash = "sha256:eb82c5e3e56209074766e6885bb04b8c38a0c015d0a30036ebe7ece34c9989e9"},
 ]
 
 [[package]]
@@ -1015,13 +1014,13 @@ files = [
 
 [[package]]
 name = "pytest"
-version = "8.0.2"
+version = "8.1.1"
 description = "pytest: simple powerful testing with Python"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "pytest-8.0.2-py3-none-any.whl", hash = "sha256:edfaaef32ce5172d5466b5127b42e0d6d35ebbe4453f0e3505d96afd93f6b096"},
-    {file = "pytest-8.0.2.tar.gz", hash = "sha256:d4051d623a2e0b7e51960ba963193b09ce6daeb9759a451844a21e4ddedfc1bd"},
+    {file = "pytest-8.1.1-py3-none-any.whl", hash = "sha256:2a8386cfc11fa9d2c50ee7b2a57e7d898ef90470a7a34c4b949ff59662bb78b7"},
+    {file = "pytest-8.1.1.tar.gz", hash = "sha256:ac978141a75948948817d360297b7aae0fcb9d6ff6bc9ec6d514b85d5a65c044"},
 ]
 
 [package.dependencies]
@@ -1029,11 +1028,11 @@ colorama = {version = "*", markers = "sys_platform == \"win32\""}
 exceptiongroup = {version = ">=1.0.0rc8", markers = "python_version < \"3.11\""}
 iniconfig = "*"
 packaging = "*"
-pluggy = ">=1.3.0,<2.0"
-tomli = {version = ">=1.0.0", markers = "python_version < \"3.11\""}
+pluggy = ">=1.4,<2.0"
+tomli = {version = ">=1", markers = "python_version < \"3.11\""}
 
 [package.extras]
-testing = ["argcomplete", "attrs (>=19.2.0)", "hypothesis (>=3.56)", "mock", "nose", "pygments (>=2.7.2)", "requests", "setuptools", "xmlschema"]
+testing = ["argcomplete", "attrs (>=19.2)", "hypothesis (>=3.56)", "mock", "pygments (>=2.7.2)", "requests", "setuptools", "xmlschema"]
 
 [[package]]
 name = "pytest-asyncio-cooperative"
@@ -1228,13 +1227,13 @@ zstd = ["zstandard (>=0.18.0)"]
 
 [[package]]
 name = "uvicorn"
-version = "0.27.1"
+version = "0.28.0"
 description = "The lightning-fast ASGI server."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "uvicorn-0.27.1-py3-none-any.whl", hash = "sha256:5c89da2f3895767472a35556e539fd59f7edbe9b1e9c0e1c99eebeadc61838e4"},
-    {file = "uvicorn-0.27.1.tar.gz", hash = "sha256:3d9a267296243532db80c83a959a3400502165ade2c1338dea4e67915fd4745a"},
+    {file = "uvicorn-0.28.0-py3-none-any.whl", hash = "sha256:6623abbbe6176204a4226e67607b4d52cc60ff62cda0ff177613645cefa2ece1"},
+    {file = "uvicorn-0.28.0.tar.gz", hash = "sha256:cab4473b5d1eaeb5a0f6375ac4bc85007ffc75c3cc1768816d9e5d589857b067"},
 ]
 
 [package.dependencies]
@@ -1453,13 +1452,13 @@ multidict = ">=4.0"
 
 [[package]]
 name = "yt-dlp"
-version = "2024.3.7.232716.dev0"
+version = "2024.3.10.232703.dev0"
 description = "A youtube-dl fork with additional features and patches"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "yt_dlp-2024.3.7.232716.dev0-py3-none-any.whl", hash = "sha256:e1dd8e160ed2a6afc36d39dab60bf10ca6b96f2bcc84277b989d2fb37facd34d"},
-    {file = "yt_dlp-2024.3.7.232716.dev0.tar.gz", hash = "sha256:e34764c21424c80c94a2112acee9820fc720abb1113215ccf75aaf35558b03e4"},
+    {file = "yt_dlp-2024.3.10.232703.dev0-py3-none-any.whl", hash = "sha256:1cfa65acd3390eca24d1b4a1bb14bacb1f5472ea1cdb5fb429663d7719aaac77"},
+    {file = "yt_dlp-2024.3.10.232703.dev0.tar.gz", hash = "sha256:8d59fdcf612ce86885bb48cebbe35ff360c519b6fda72a608a6fe1c5f35fe6e4"},
 ]
 
 [package.dependencies]
@@ -1482,4 +1481,4 @@ secretstorage = ["cffi", "secretstorage"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "7781152fb3a1e9369c9d100439ebaf5b9db4b68345a589c8f60079d6db9de1a0"
+content-hash = "1d98ab92ad359c1c143d77b48f8c89e19938661c6aece8790965335f4a4519ff"
