@@ -9,7 +9,7 @@ python = "^3.10"
 
 blacksheep = "^1.2.18"
 uvicorn = "^0.28.0"
-yt-dlp = {version = "^2024.2.9.232659.dev0", allow-prereleases = true}
+yt-dlp = "^2024.3.10"
 # because uvicorn:    https://github.com/encode/uvicorn/blob/master/uvicorn/_types.py
 # because blacksheep: https://github.com/Neoteroi/BlackSheep/blob/main/blacksheep/asgi.pyi
 typing-extensions = "^4.7.1"
