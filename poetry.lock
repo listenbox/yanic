@@ -1227,13 +1227,13 @@ zstd = ["zstandard (>=0.18.0)"]
 
 [[package]]
 name = "uvicorn"
-version = "0.28.0"
+version = "0.29.0"
 description = "The lightning-fast ASGI server."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "uvicorn-0.28.0-py3-none-any.whl", hash = "sha256:6623abbbe6176204a4226e67607b4d52cc60ff62cda0ff177613645cefa2ece1"},
-    {file = "uvicorn-0.28.0.tar.gz", hash = "sha256:cab4473b5d1eaeb5a0f6375ac4bc85007ffc75c3cc1768816d9e5d589857b067"},
+    {file = "uvicorn-0.29.0-py3-none-any.whl", hash = "sha256:2c2aac7ff4f4365c206fd773a39bf4ebd1047c238f8b8268ad996829323473de"},
+    {file = "uvicorn-0.29.0.tar.gz", hash = "sha256:6a69214c0b6a087462412670b3ef21224fa48cae0e452b5883e8e8bdfdd11dd0"},
 ]
 
 [package.dependencies]
@@ -1246,25 +1246,14 @@ standard = ["colorama (>=0.4)", "httptools (>=0.5.0)", "python-dotenv (>=0.13)",
 
 [[package]]
 name = "validators"
-version = "0.22.0"
+version = "0.23.2"
 description = "Python Data Validation for Humans™"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "validators-0.22.0-py3-none-any.whl", hash = "sha256:61cf7d4a62bbae559f2e54aed3b000cea9ff3e2fdbe463f51179b92c58c9585a"},
-    {file = "validators-0.22.0.tar.gz", hash = "sha256:77b2689b172eeeb600d9605ab86194641670cdb73b60afd577142a9397873370"},
+    {file = "validators-0.23.2-py3-none-any.whl", hash = "sha256:cb68e489f946f4934dbd3c203f08486c53493ab1c204f39d13b13c209f60e2c1"},
+    {file = "validators-0.23.2.tar.gz", hash = "sha256:397ec4a1e86192e6e904b5afe8c12da0e6eaa3db088c0cc426e00cfee2ef07a8"},
 ]
-
-[package.extras]
-docs-offline = ["myst-parser (>=2.0.0)", "pypandoc-binary (>=1.11)", "sphinx (>=7.1.1)"]
-docs-online = ["mkdocs (>=1.5.2)", "mkdocs-git-revision-date-localized-plugin (>=1.2.0)", "mkdocs-material (>=9.2.6)", "mkdocstrings[python] (>=0.22.0)", "pyaml (>=23.7.0)"]
-hooks = ["pre-commit (>=3.3.3)"]
-package = ["build (>=1.0.0)", "twine (>=4.0.2)"]
-runner = ["tox (>=4.11.1)"]
-sast = ["bandit[toml] (>=1.7.5)"]
-testing = ["pytest (>=7.4.0)"]
-tooling = ["black (>=23.7.0)", "pyright (>=1.1.325)", "ruff (>=0.0.287)"]
-tooling-extras = ["pyaml (>=23.7.0)", "pypandoc-binary (>=1.11)", "pytest (>=7.4.0)"]
 
 [[package]]
 name = "websockets"
@@ -1481,4 +1470,4 @@ secretstorage = ["cffi", "secretstorage"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "cb36432292484113eed8d2df5dabc32d7e1fc0e16c6a7982838fd11ce237ed97"
+content-hash = "6537510e780d573a81001020aab7dd069de5666f569d855aeda43c184471cbc1"
