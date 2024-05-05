@@ -52,21 +52,19 @@ def responsible(client, openapi) -> Responsible:
     return Responsible(client, openapi)
 
 
+SKIP_ANDROID = {
+    'youtube': {
+        'player_client': ['ios', 'web'],
+    },
+}
+
+
 def info_opts(ext: str, proxy: Optional[str] = None):
     return {
         "format": f"bestaudio[ext={ext}]/best[ext={ext}]",
         "proxy": proxy,
         "extractor_retries": 0,
-    }
-
-
-def playlist_opts(proxy: Optional[str] = None, limit: int = 500):
-    return {
-        "proxy": proxy,
-        "extract_flat": "in_playlist",
-        "playlistend": limit,
-        "extractor_retries": 0,
-        "extractor_args": {"youtubetab": {"approximate_date": "True"}},
+        'extractor_args': SKIP_ANDROID,
     }
 
 
@@ -85,12 +83,26 @@ def download_opts(file: str, proxy: Optional[str] = None):
         "max_downloads": 1,
         "proxy": proxy,
         "extractor_retries": 0,
+        'extractor_args': SKIP_ANDROID,
+    }
+
+
+def playlist_opts(proxy: Optional[str] = None, limit: int = 500):
+    return {
+        "proxy": proxy,
+        "extract_flat": "in_playlist",
+        "playlistend": limit,
+        "extractor_retries": 0,
+        "extractor_args": {
+            "youtubetab": {"approximate_date": "True"},
+        },
     }
 
 
 @pytest.mark.asyncio_cooperative
 async def test_incomplete_youtube_id(responsible):
-    req = RRequest("POST", "/info", json={"url": "https://www.youtube.com/watch?v=bigXuLv7lN", "opts": {}})
+    req = RRequest("POST", "/info",
+                   json={"url": "https://www.youtube.com/watch?v=bigXuLv7lN", "opts": info_opts("m4a")})
     res = await responsible.check(req, status=422)
 
     assert "Incomplete YouTube ID" in await res.text()
@@ -98,17 +110,19 @@ async def test_incomplete_youtube_id(responsible):
 
 @pytest.mark.asyncio_cooperative
 async def test_has_abr(responsible):
-    req = RRequest("POST", "/info", json={"url": "https://www.youtube.com/watch?v=bigXuLv7lNE", "opts": {}})
+    req = RRequest("POST", "/info", json={
+        "url": "https://www.youtube.com/watch?v=bigXuLv7lNE",
+        "opts": info_opts("m4a")
+    })
     res = await responsible.check(req, status=200)
 
     info = await res.json()
     assert "abr" in info
 
 
-@pytest.mark.skip("yt-dlp 2023.6.21 broke instagram")
 @pytest.mark.asyncio_cooperative
 async def test_instagram_tv(responsible):
-    req = RRequest("POST", "/info", json={"url": "https://www.instagram.com/tv/CCwKLP8oAbB", "opts": {}})
+    req = RRequest("POST", "/info", json={"url": "https://www.instagram.com/tv/CCwKLP8oAbB", "opts": info_opts("mp4")})
     res = await responsible.check(req, status=200)
     info = await res.json()
     assert len(info["formats"]) > 0
