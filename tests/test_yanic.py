@@ -10,11 +10,10 @@ import uvicorn
 from aiohttp import ClientSession
 
 from responsible import OpenAPI, RRequest, Responsible
-from yanic.server import app
 
 
 def _start_server(port: int):
-    uvicorn.run(app, port=port, access_log=False)
+    uvicorn.run(app="yanic.server:app", port=port, access_log=False, workers=5)
 
 
 @pytest.fixture(scope="module")

@@ -40,18 +40,18 @@ class _InfoReq:
 
 
 @app.router.post("/info")
-async def _info(req: blacksheep.FromJSON[_InfoReq]) -> blacksheep.Response:
+def _info(req: blacksheep.FromJSON[_InfoReq]) -> blacksheep.Response:
     try:
-        info = await youtube_info(req.value.url, req.value.opts)
+        info = youtube_info(req.value.url, req.value.opts)
         return blacksheep.json(info, status=200)
     except Exception as err:
         return blacksheep.text(str(err), status=422)
 
 
 @app.router.get("/info")
-async def _get_info(url: blacksheep.FromQuery[str]) -> blacksheep.Response:
+def _get_info(url: blacksheep.FromQuery[str]) -> blacksheep.Response:
     try:
-        info = await youtube_info(url.value, opts=None)
+        info = youtube_info(url.value, opts=None)
         return blacksheep.json(info, status=200)
     except Exception as err:
         return blacksheep.text(str(err), status=422)
@@ -64,9 +64,9 @@ class _DownloadReq:
 
 
 @app.router.post("/download")
-async def _download(req: blacksheep.FromJSON[_DownloadReq]) -> blacksheep.Response:
+def _download(req: blacksheep.FromJSON[_DownloadReq]) -> blacksheep.Response:
     try:
-        await youtube_download(req.value.info, req.value.opts)
+        youtube_download(req.value.info, req.value.opts)
         return blacksheep.json("ok", status=200)
     except Exception as err:
         return blacksheep.text(str(err), status=422)
@@ -77,4 +77,11 @@ app.middlewares.append(_log_res_time)
 
 def main() -> None:
     port = int(os.environ.get('PORT', '8006'))
-    uvicorn.run(app, port=port, limit_max_requests=10_000, access_log=False, log_level=logging.INFO)
+    uvicorn.run(
+        app="yanic.server:app",
+        port=port,
+        limit_max_requests=10_000,
+        access_log=False,
+        log_level=logging.INFO,
+        workers=7,
+    )
