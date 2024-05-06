@@ -3,8 +3,8 @@ import os
 import time
 from dataclasses import dataclass
 
-import blacksheep
 import uvicorn
+import blacksheep
 
 from yanic.ytdl import youtube_info, youtube_download, Opts, Info
 
@@ -28,7 +28,7 @@ async def _log_res_time(req: blacksheep.Request, handler):
 app = blacksheep.Application()
 
 
-@app.router.get("/health")
+@blacksheep.get("/health")
 def _health() -> blacksheep.Response:
     return blacksheep.no_content()
 
@@ -39,7 +39,7 @@ class _InfoReq:
     opts: Opts = None
 
 
-@app.router.post("/info")
+@blacksheep.post("/info")
 def _info(req: blacksheep.FromJSON[_InfoReq]) -> blacksheep.Response:
     try:
         info = youtube_info(req.value.url, req.value.opts)
@@ -48,7 +48,7 @@ def _info(req: blacksheep.FromJSON[_InfoReq]) -> blacksheep.Response:
         return blacksheep.text(str(err), status=422)
 
 
-@app.router.get("/info")
+@blacksheep.get("/info")
 def _get_info(url: blacksheep.FromQuery[str]) -> blacksheep.Response:
     try:
         info = youtube_info(url.value, opts=None)
@@ -63,7 +63,7 @@ class _DownloadReq:
     opts: Opts = None
 
 
-@app.router.post("/download")
+@blacksheep.post("/download")
 def _download(req: blacksheep.FromJSON[_DownloadReq]) -> blacksheep.Response:
     try:
         youtube_download(req.value.info, req.value.opts)

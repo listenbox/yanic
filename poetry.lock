@@ -142,40 +142,43 @@ tests-no-zope = ["attrs[tests-mypy]", "cloudpickle", "hypothesis", "pympler", "p
 
 [[package]]
 name = "blacksheep"
-version = "1.2.18"
+version = "2.0.7"
 description = "Fast web framework for Python asyncio"
 optional = false
-python-versions = "*"
+python-versions = ">=3.7"
 files = [
-    {file = "blacksheep-1.2.18-cp310-cp310-macosx_11_0_x86_64.whl", hash = "sha256:14412ad79c0cacad3534a5f54feddaffa1283bee24ce5306e02fe029984eaf85"},
-    {file = "blacksheep-1.2.18-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:3b11672885ae5b195bd4dc685e553fd6078e2b6cb29f08239aba7d677a679893"},
-    {file = "blacksheep-1.2.18-cp310-cp310-win_amd64.whl", hash = "sha256:db6b1455910025d65093b0b0b312a1fcd37ee06310d4b8a0434dbc8e1344e67b"},
-    {file = "blacksheep-1.2.18-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:75d11454a34abdda2f0e41dfb3e6438dc57339f93c7f09358b5ca9ef5df806b0"},
-    {file = "blacksheep-1.2.18-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:df7a43b15059312f4394caf926ca1dbd61b624339f7a22802907bc6ce0f3c70e"},
-    {file = "blacksheep-1.2.18-cp311-cp311-win_amd64.whl", hash = "sha256:7fd9c9b2104ce1e95e42b582c3f0194425e3d3e1a13176ac8e6c38d1e4bea82f"},
-    {file = "blacksheep-1.2.18-cp38-cp38-macosx_11_0_x86_64.whl", hash = "sha256:8360e1251ea7a9ba025d1542b31c066db5f5c3e13df384ba0ef0f5606715aecc"},
-    {file = "blacksheep-1.2.18-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:d733d4d9017ff57e618111c4cc6ad1a9a2ca23d62ccfa9dbbb9816117afffea2"},
-    {file = "blacksheep-1.2.18-cp38-cp38-win_amd64.whl", hash = "sha256:7deee8774ea68c586193d7b0c1d9feea109dc018e88223cc5032900b4255d5b4"},
-    {file = "blacksheep-1.2.18-cp39-cp39-macosx_11_0_x86_64.whl", hash = "sha256:f2427c6f0be6eccbf9ebddcec450da2b78b944a4a7ccd756bbe1ea0ae7f6cdd2"},
-    {file = "blacksheep-1.2.18-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:fb8a951829bce23476386a2adea3e6de41cc22ddb5635a43453fc2dc91e9209b"},
-    {file = "blacksheep-1.2.18-cp39-cp39-win_amd64.whl", hash = "sha256:8fb8656776e370b52e26ab0b873abbadd6ca64e6fda610728aa58b328674387a"},
-    {file = "blacksheep-1.2.18.tar.gz", hash = "sha256:50cf71512b1e071cc32a183f97bbdcaf5b34f39e4f86015d3d3d717c2a127952"},
+    {file = "blacksheep-2.0.7-cp310-cp310-macosx_11_0_x86_64.whl", hash = "sha256:7d707010d71f9a7d048966cac9f8e21eb772c7a04b54755ae9a2e51b3e888bea"},
+    {file = "blacksheep-2.0.7-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:b0ef73603ccbb08cb161078f174be059c7ab6881534899891b76a46afde81f00"},
+    {file = "blacksheep-2.0.7-cp310-cp310-win_amd64.whl", hash = "sha256:dd97981fb7e9ee22416df14a17cb88307202e49d90ce5fdd9f99d531c3eb3c2a"},
+    {file = "blacksheep-2.0.7-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:676285158a3d3bdd77e5bf48805e6359d86ef718ad21895ad239c7f32b11e110"},
+    {file = "blacksheep-2.0.7-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:bcee81f0238ee5c10c7fc4d45a8a49cd012188ab9756c695922aa79c73cd1f5c"},
+    {file = "blacksheep-2.0.7-cp311-cp311-win_amd64.whl", hash = "sha256:aff0e2503c5fc7237475533d788153c01acaf4d00bb7a0a62d7fcb526ed6ec62"},
+    {file = "blacksheep-2.0.7-cp312-cp312-macosx_10_9_universal2.whl", hash = "sha256:36f5c7cd30b36bc076aed972ba68645acde0af59e6c2a5b6ab301bc27ec7a01e"},
+    {file = "blacksheep-2.0.7-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:7d451f4c18d7af1852ee6cc52ab7a0bb0c435d1d6cd6c22d4238d229400c25b8"},
+    {file = "blacksheep-2.0.7-cp312-cp312-win_amd64.whl", hash = "sha256:fb2594c101241d4a983085667898a6f43024024d9722f8a3df16150f4bdd5d39"},
+    {file = "blacksheep-2.0.7-cp38-cp38-macosx_11_0_x86_64.whl", hash = "sha256:f02abc213aa95f8d8453609b3e601da785f11712396a65f3945e5b9b66d20f1b"},
+    {file = "blacksheep-2.0.7-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:fb826d920e5fc75e44f36de36b59b891d2c34004091083f8525c2373d0d4cf75"},
+    {file = "blacksheep-2.0.7-cp38-cp38-win_amd64.whl", hash = "sha256:2f4cc63f9f18c56ae349d2f03c991fbc5affc6b871674c407b60d574be8683a6"},
+    {file = "blacksheep-2.0.7-cp39-cp39-macosx_11_0_x86_64.whl", hash = "sha256:f0a8036eb9475d9387da6b9d21470e22a1acd5da17ea973f0e5f378846f2344d"},
+    {file = "blacksheep-2.0.7-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:81cf3c2adab437f1d8e25c54b9920434b47db78463a46108dfacc429bd52b286"},
+    {file = "blacksheep-2.0.7-cp39-cp39-win_amd64.whl", hash = "sha256:cc6ab2376aa76189dd4c6e588e97aa67843d5df7ee95f8d4b8255d6fc1deab52"},
+    {file = "blacksheep-2.0.7.tar.gz", hash = "sha256:ae192809c1e42de5a0d6230f1238d027641a8d889a4a9fb5349b7980f74afd88"},
 ]
 
 [package.dependencies]
-certifi = ">=2022.12.7"
+certifi = ">=2022.9.24"
 charset-normalizer = ">=3.1.0,<3.2.0"
 essentials = ">=1.1.4,<2.0"
-essentials-openapi = ">=0.1.4,<1.1"
-guardpost = ">=0.0.9,<0.1.0"
+essentials-openapi = ">=1.0.6,<1.1"
+guardpost = ">=1.0.2"
 httptools = ">=0.5"
 itsdangerous = ">=2.1.2,<2.2.0"
-Jinja2 = ">=3.1.2,<3.2.0"
 python-dateutil = ">=2.8.2,<2.9.0"
-rodi = ">=1.1.1,<1.2.0"
+rodi = ">=2.0.2,<2.1.0"
 
 [package.extras]
-full = ["PyJWT (>=2.6.0,<2.7.0)", "cryptography (>=38.0.1,<38.1.0)", "websockets (>=10.3,<11.0)"]
+full = ["PyJWT (>=2.6.0,<2.7.0)", "cryptography (>=38.0.1,<41.1.0)", "websockets (>=10.3,<11.0)"]
+jinja = ["Jinja2 (>=3.1.2,<3.2.0)"]
 
 [[package]]
 name = "brotli"
@@ -624,17 +627,20 @@ files = [
 
 [[package]]
 name = "guardpost"
-version = "0.0.9"
-description = "Basic framework to handle authentication and authorization in any kind of Python application."
+version = "1.0.2"
+description = "Framework to handle authentication and authorization."
 optional = false
-python-versions = "*"
+python-versions = ">=3.7"
 files = [
-    {file = "guardpost-0.0.9-py3-none-any.whl", hash = "sha256:a7ac4d9910ebc50114b275fcbbc4d2411e8a7d4b0d0b9824e0a1e9623583b804"},
-    {file = "guardpost-0.0.9.tar.gz", hash = "sha256:4c309d6bb2975e55edb95f7ac5019b9cefeba43736ce71f6275156978aa75fc9"},
+    {file = "guardpost-1.0.2-py3-none-any.whl", hash = "sha256:e7b7e5c61f776b055c7f4ee382ab78149bfe66f367f0e187574c3664e1740579"},
+    {file = "guardpost-1.0.2.tar.gz", hash = "sha256:4566616c1bc01c148275ed8d1cd56f7dffeced490c7d8c599c90293308e55c94"},
 ]
 
+[package.dependencies]
+rodi = ">=2.0.0"
+
 [package.extras]
-jwt = ["PyJWT (>=2.3.0,<2.4.0)", "cryptography (>=35.0.0,<35.1.0)"]
+jwt = ["cryptography", "pyjwt"]
 
 [[package]]
 name = "h11"
@@ -727,23 +733,6 @@ files = [
     {file = "itsdangerous-2.1.2-py3-none-any.whl", hash = "sha256:2c2349112351b88699d8d4b6b075022c0808887cb7ad10069318a8b0bc88db44"},
     {file = "itsdangerous-2.1.2.tar.gz", hash = "sha256:5dbbc68b317e5e42f327f9021763545dc3fc3bfe22e6deb96aaf1fc38874156a"},
 ]
-
-[[package]]
-name = "jinja2"
-version = "3.1.4"
-description = "A very fast and expressive template engine."
-optional = false
-python-versions = ">=3.7"
-files = [
-    {file = "jinja2-3.1.4-py3-none-any.whl", hash = "sha256:bc5dd2abb727a5319567b7a813e6a2e7318c39f4f487cfe6c89c6f9c7d25197d"},
-    {file = "jinja2-3.1.4.tar.gz", hash = "sha256:4a3aee7acbbe7303aede8e9648d13b8bf88a429282aa6122a993f0ac800cb369"},
-]
-
-[package.dependencies]
-MarkupSafe = ">=2.0"
-
-[package.extras]
-i18n = ["Babel (>=2.7)"]
 
 [[package]]
 name = "markupsafe"
@@ -1143,13 +1132,13 @@ use-chardet-on-py3 = ["chardet (>=3.0.2,<6)"]
 
 [[package]]
 name = "rodi"
-version = "1.1.3"
+version = "2.0.6"
 description = "Implementation of dependency injection for Python 3"
 optional = false
-python-versions = "*"
+python-versions = ">=3.7"
 files = [
-    {file = "rodi-1.1.3-py3-none-any.whl", hash = "sha256:d30a34b5dd15200754bccf84cbd57d8be2bcf1da65510b6439d1922c2a185844"},
-    {file = "rodi-1.1.3.tar.gz", hash = "sha256:18bd3efccd5045920a27784ebd5fd01b48e8dbeb5d5dc3d880921ff69153446a"},
+    {file = "rodi-2.0.6-py3-none-any.whl", hash = "sha256:d299276be19842133def84dde365771d11a5195b76be0595eae9c1ecad818446"},
+    {file = "rodi-2.0.6.tar.gz", hash = "sha256:f533e315d84b63824efcc67526a156ad5fb0a158f1ccbc41e0db3944d0c08693"},
 ]
 
 [[package]]
@@ -1483,4 +1472,4 @@ secretstorage = ["cffi", "secretstorage"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "1417a2d26d02b355bcb985738ed1e5829f36cfe9baf2c36787defc4cb383b4ac"
+content-hash = "e18003b61a29b67ca156e533ce645353ecbbb1b2164dad70e8fda7648e1f5d45"

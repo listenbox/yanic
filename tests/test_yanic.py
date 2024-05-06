@@ -13,7 +13,7 @@ from responsible import OpenAPI, RRequest, Responsible
 
 
 def _start_server(port: int):
-    uvicorn.run(app="yanic.server:app", port=port, access_log=False, workers=5)
+    uvicorn.run(app="yanic.server:app", port=port, access_log=False, workers=4)
 
 
 @pytest.fixture(scope="module")
