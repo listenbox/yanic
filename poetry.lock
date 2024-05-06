@@ -142,23 +142,24 @@ tests-no-zope = ["attrs[tests-mypy]", "cloudpickle", "hypothesis", "pympler", "p
 
 [[package]]
 name = "blacksheep"
-version = "1.2.20"
+version = "1.2.18"
 description = "Fast web framework for Python asyncio"
 optional = false
 python-versions = "*"
 files = [
-    {file = "blacksheep-1.2.20-cp310-cp310-macosx_11_0_x86_64.whl", hash = "sha256:fa57abe3ded9dca778659d5523aeecec75531fa74322cd7f5ae8de316c4a5aaa"},
-    {file = "blacksheep-1.2.20-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:188fb88b2c7a260d72d2965a02692debc3caf67b3bc167a98e232d0bd36baaae"},
-    {file = "blacksheep-1.2.20-cp310-cp310-win_amd64.whl", hash = "sha256:bbe28efbfa4a496618af790cb4947aab834da577cb5cccecd4ea8d22f4047aeb"},
-    {file = "blacksheep-1.2.20-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:e302efc88f2fc592fd202e99f83b2614384943a525f8cd6a3a5cc564e71cdf78"},
-    {file = "blacksheep-1.2.20-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:17bcf4fddd17768a45cacf3d88919fc81baa5ffc8811733052456c683d8225b4"},
-    {file = "blacksheep-1.2.20-cp311-cp311-win_amd64.whl", hash = "sha256:9bf5e8249b7d94adc053a76e5ce43036fb3f725e0934f18ff5c00127efb46329"},
-    {file = "blacksheep-1.2.20-cp38-cp38-macosx_11_0_x86_64.whl", hash = "sha256:e38a4a800a866d8fa00041431886730fe4de6958bbc9984bf401b7ec41c41f89"},
-    {file = "blacksheep-1.2.20-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:fddc73f1c14782862f010baa3bbe66c21d9a36e50e919a2d785cf0435b187e7c"},
-    {file = "blacksheep-1.2.20-cp38-cp38-win_amd64.whl", hash = "sha256:d7954ab44ded25e91afdac06e28ec800f9e9f83a09555564666023eec6231c5b"},
-    {file = "blacksheep-1.2.20-cp39-cp39-macosx_11_0_x86_64.whl", hash = "sha256:8d027da05118e75872809b9492b793f64f83365dfe472fbdbed2fe4a8607222e"},
-    {file = "blacksheep-1.2.20-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:53bc843c1e07f527a44b9edfdf6cb8496730308b9a15d4212c10051bfae3fe97"},
-    {file = "blacksheep-1.2.20-cp39-cp39-win_amd64.whl", hash = "sha256:a918c8955b18b7a846a03735bf72d361190f1c04b6463bbe56b51d862f6d04e6"},
+    {file = "blacksheep-1.2.18-cp310-cp310-macosx_11_0_x86_64.whl", hash = "sha256:14412ad79c0cacad3534a5f54feddaffa1283bee24ce5306e02fe029984eaf85"},
+    {file = "blacksheep-1.2.18-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:3b11672885ae5b195bd4dc685e553fd6078e2b6cb29f08239aba7d677a679893"},
+    {file = "blacksheep-1.2.18-cp310-cp310-win_amd64.whl", hash = "sha256:db6b1455910025d65093b0b0b312a1fcd37ee06310d4b8a0434dbc8e1344e67b"},
+    {file = "blacksheep-1.2.18-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:75d11454a34abdda2f0e41dfb3e6438dc57339f93c7f09358b5ca9ef5df806b0"},
+    {file = "blacksheep-1.2.18-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:df7a43b15059312f4394caf926ca1dbd61b624339f7a22802907bc6ce0f3c70e"},
+    {file = "blacksheep-1.2.18-cp311-cp311-win_amd64.whl", hash = "sha256:7fd9c9b2104ce1e95e42b582c3f0194425e3d3e1a13176ac8e6c38d1e4bea82f"},
+    {file = "blacksheep-1.2.18-cp38-cp38-macosx_11_0_x86_64.whl", hash = "sha256:8360e1251ea7a9ba025d1542b31c066db5f5c3e13df384ba0ef0f5606715aecc"},
+    {file = "blacksheep-1.2.18-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:d733d4d9017ff57e618111c4cc6ad1a9a2ca23d62ccfa9dbbb9816117afffea2"},
+    {file = "blacksheep-1.2.18-cp38-cp38-win_amd64.whl", hash = "sha256:7deee8774ea68c586193d7b0c1d9feea109dc018e88223cc5032900b4255d5b4"},
+    {file = "blacksheep-1.2.18-cp39-cp39-macosx_11_0_x86_64.whl", hash = "sha256:f2427c6f0be6eccbf9ebddcec450da2b78b944a4a7ccd756bbe1ea0ae7f6cdd2"},
+    {file = "blacksheep-1.2.18-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:fb8a951829bce23476386a2adea3e6de41cc22ddb5635a43453fc2dc91e9209b"},
+    {file = "blacksheep-1.2.18-cp39-cp39-win_amd64.whl", hash = "sha256:8fb8656776e370b52e26ab0b873abbadd6ca64e6fda610728aa58b328674387a"},
+    {file = "blacksheep-1.2.18.tar.gz", hash = "sha256:50cf71512b1e071cc32a183f97bbdcaf5b34f39e4f86015d3d3d717c2a127952"},
 ]
 
 [package.dependencies]
@@ -1482,4 +1483,4 @@ secretstorage = ["cffi", "secretstorage"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "95189a984e9ddeeb8ced36ee8ce3d71267a7c5c51f1a37280db78862eecb05ed"
+content-hash = "1417a2d26d02b355bcb985738ed1e5829f36cfe9baf2c36787defc4cb383b4ac"
