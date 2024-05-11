@@ -1159,13 +1159,13 @@ testing-integration = ["build[virtualenv] (>=1.0.3)", "filelock (>=3.4.0)", "jar
 
 [[package]]
 name = "shiv"
-version = "1.0.5"
+version = "1.0.6"
 description = "A command line utility for building fully self contained Python zipapps."
 optional = false
 python-versions = ">=3.6"
 files = [
-    {file = "shiv-1.0.5-py2.py3-none-any.whl", hash = "sha256:c6b30b37ffc8d8b06ee9c9f231ef54966c710d28e55cee3fe57f84335a1b5d4c"},
-    {file = "shiv-1.0.5.tar.gz", hash = "sha256:ddeaf2538fb81c57cc22b9acb755659ba1a8ba7cefb427c58806058401ff45d5"},
+    {file = "shiv-1.0.6-py2.py3-none-any.whl", hash = "sha256:a6ab14ba82729b7e9775e41e3beca02375c888115d0c060fc3bd980b37cb0495"},
+    {file = "shiv-1.0.6.tar.gz", hash = "sha256:e222768135977bebdfb5c0d1a7dfea29557c566b58d300d5b8c2535ef223d776"},
 ]
 
 [package.dependencies]
@@ -1442,13 +1442,13 @@ multidict = ">=4.0"
 
 [[package]]
 name = "yt-dlp"
-version = "2024.5.5.232701.dev0"
+version = "2024.5.10.232705.dev0"
 description = "A feature-rich command-line audio/video downloader"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "yt_dlp-2024.5.5.232701.dev0-py3-none-any.whl", hash = "sha256:53d19447a9d7f4898e7b921da84f722362b7f63ad4d39305ea61a23ea0f8fbf3"},
-    {file = "yt_dlp-2024.5.5.232701.dev0.tar.gz", hash = "sha256:513f53508a1da20ee1b93cd72a3351e8ef96af81d90394a61cca1bd8b2d4d0d2"},
+    {file = "yt_dlp-2024.5.10.232705.dev0-py3-none-any.whl", hash = "sha256:4727d325770f0a642ab382da48d8a75a27bc3d06a4b7d109062fa1ed290bf7fc"},
+    {file = "yt_dlp-2024.5.10.232705.dev0.tar.gz", hash = "sha256:f072f7316f5686089f8221a90a8403b90aa575aca14693375714e7cda091a8f0"},
 ]
 
 [package.dependencies]
