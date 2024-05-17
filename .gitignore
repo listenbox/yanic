@@ -9,3 +9,4 @@ yanic_pb2*
 openapi.json
 yanic.pyz
 Taskfile.yml
+.task/
