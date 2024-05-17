@@ -1,0 +1,32 @@
+version: "3"
+
+tasks:
+  tests: poetry run pytest
+
+  start: poetry run uvicorn yanic.server:app --reload --port 8006 --no-access-log
+
+  poetry:
+    - poetry lock
+    - poetry show --outdated
+    - poetry update
+    - poetry install --sync
+
+  openapi.json: bunx @responsibleapi/cli yanic.kdl -o openapi.json
+
+  build:
+    vars:
+      image_name: poetry-arm64-cpython-3.10
+      container_name: yanic-builder
+    cmds:
+      - docker build -t "{{.image_name}}" docker/
+      - docker rm -f "{{.container_name}}"
+      - docker run -d --name "{{.container_name}}" -v "./":/app "{{.image_name}}"
+      - docker exec "{{.container_name}}" /bin/bash -c "cd app/ && ./container.sh"
+      - docker cp "{{.container_name}}:/app/yanic.pyz" "./yanic.pyz"
+      - docker rm -f "{{.container_name}}"
+
+  schemathesis:
+    deps:
+      - openapi.json
+    cmds:
+      - poetry run st run --checks all --base-url http://localhost:8006 --workers 40 ./openapi.json

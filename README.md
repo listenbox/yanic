@@ -8,11 +8,18 @@ Async [yt-dlp](https://github.com/yt-dlp/yt-dlp) server
 
 Spawning a new Python interpreter for each download is slow
 
+## Dev Environment
+
+```sh
+brew install go-task pipx
+pipx install poetry
+```
+
 ## Development
 
 ```sh
-make poetry
-make start
+task poetry
+task start
 ```
 
 ### Testing
@@ -22,17 +29,17 @@ requires [bunx from Bun](https://bun.sh/docs/cli/bunx) or [npx from node.js](htt
 to compile the protocol to `openapi.json`
 
 ```sh
-make openapi.json
-make tests
+task openapi.json
+task tests
 ```
 
 ## Deployment
 
 Uses [shiv](https://github.com/linkedin/shiv) to build a [zipapp](https://docs.python.org/3/library/zipapp.html).
-Modify `--platform manylinux2014_x86_64 --python-version 310` to your needs in the [Makefile](Makefile)
+Modify `--platform manylinux2014_x86_64 --python-version 310` to your needs in the [Taskfile](Taskfile.yml)
 
 ```sh
-make build
+task build
 # rsync yanic.pyz to server
 PORT=8006 ./yanic.pyz
 ```

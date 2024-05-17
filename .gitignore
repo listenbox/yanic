@@ -8,4 +8,4 @@ yanic_pb2*
 .hypothesis/
 openapi.json
 yanic.pyz
-prod.mk
+Taskfile.yml
