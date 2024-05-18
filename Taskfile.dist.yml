@@ -34,7 +34,7 @@ tasks:
       - docker build -t "{{.image_name}}" docker/
       - docker run -d --name "{{.container_name}}" -v "./":/app "{{.image_name}}"
       - defer: docker rm -f "{{.container_name}}"
-      - docker exec "{{.container_name}}" /bin/bash -c "cd app/ && ./container.sh"
+      - docker exec "{{.container_name}}" /bin/bash -c "cd app/ && docker/container.sh"
       - docker cp "{{.container_name}}:/app/yanic.pyz" "./yanic.pyz"
     sources:
       - Taskfile.dist.yml
@@ -42,7 +42,6 @@ tasks:
       - pyproject.toml
       - poetry.lock
       - docker/
-      - container.sh
     generates: [yanic.pyz]
 
   schemathesis:
