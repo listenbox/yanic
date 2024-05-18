@@ -15,7 +15,8 @@ tasks:
       - poetry.lock
       - openapi.json
 
-  start: poetry run uvicorn yanic.server:app --reload --port 8006 --no-access-log
+  start:
+    - poetry run uvicorn yanic.server:app --reload --port 8006 --no-access-log
 
   poetry:
     cmds:
@@ -31,12 +32,12 @@ tasks:
       container_name: yanic-builder
     cmds:
       - docker build -t "{{.image_name}}" docker/
-      - docker rm -f "{{.container_name}}"
       - docker run -d --name "{{.container_name}}" -v "./":/app "{{.image_name}}"
+      - defer: docker rm -f "{{.container_name}}"
       - docker exec "{{.container_name}}" /bin/bash -c "cd app/ && ./container.sh"
       - docker cp "{{.container_name}}:/app/yanic.pyz" "./yanic.pyz"
-      - docker rm -f "{{.container_name}}"
     sources:
+      - Taskfile.dist.yml
       - yanic/
       - pyproject.toml
       - poetry.lock
