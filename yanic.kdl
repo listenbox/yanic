@@ -1,4 +1,4 @@
-// https://responsibleapi.com/
+/** https://responsibleapi.com */
 responsible syntax=1
 
 info {
@@ -11,9 +11,8 @@ servers {
     url "http://localhost:8006"
 }
 
-// defined in an external lib. yt-dlp for python, manually for kotlin
-type "YtDlInfo" "struct"
-type "YtDlOpts" "struct"
+type "YtDlInfo" "struct" description="defined in an external lib. yt-dlp for Python, manually for Kotlin"
+type "YtDlOpts" "struct" description="defined in an external lib. yt-dlp for Python, manually for Kotlin"
 
 struct "InfoReq" {
     url "httpURL"
@@ -35,11 +34,15 @@ struct "DownloadReq" {
 
         header "Content-Length" "int32" minimum=1
 
-        // invalid requests
-        "400" "text/plain" "string" minLength=1
+        "400" {
+            description "invalid request"
+            body "text/plain" "string" minLength=1
+        }
 
-        // yt-dlp console errors
-        "422" "text/plain" "string" minLength=1
+        "422" {
+            description "yt-dlp error"
+            body "text/plain" "string" minLength=1
+        }
     }
 }
 
