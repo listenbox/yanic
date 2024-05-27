@@ -1199,13 +1199,13 @@ files = [
 
 [[package]]
 name = "typing-extensions"
-version = "4.11.0"
+version = "4.12.0"
 description = "Backported and Experimental Type Hints for Python 3.8+"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "typing_extensions-4.11.0-py3-none-any.whl", hash = "sha256:c1f94d72897edaf4ce775bb7558d5b79d8126906a14ea5ed1635921406c0387a"},
-    {file = "typing_extensions-4.11.0.tar.gz", hash = "sha256:83f085bd5ca59c80295fc2a82ab5dac679cbe02b9f33f7d83af68e241bea51b0"},
+    {file = "typing_extensions-4.12.0-py3-none-any.whl", hash = "sha256:b349c66bea9016ac22978d800cfff206d5f9816951f12a7d0ec5578b0a819594"},
+    {file = "typing_extensions-4.12.0.tar.gz", hash = "sha256:8cbcdc8606ebcb0d95453ad7dc5065e6237b6aa230a31e81d0f440c30fed5fd8"},
 ]
 
 [[package]]
@@ -1246,13 +1246,13 @@ standard = ["colorama (>=0.4)", "httptools (>=0.5.0)", "python-dotenv (>=0.13)",
 
 [[package]]
 name = "validators"
-version = "0.28.1"
+version = "0.28.3"
 description = "Python Data Validation for Humans™"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "validators-0.28.1-py3-none-any.whl", hash = "sha256:890c98789ad884037f059af6ea915ec2d667129d509180c2c590b8009a4c4219"},
-    {file = "validators-0.28.1.tar.gz", hash = "sha256:5ac88e7916c3405f0ce38ac2ac82a477fcf4d90dbbeddd04c8193171fc17f7dc"},
+    {file = "validators-0.28.3-py3-none-any.whl", hash = "sha256:53cafa854f13850156259d9cc479b864ee901f6a96e6b109e6fc33f98f37d99f"},
+    {file = "validators-0.28.3.tar.gz", hash = "sha256:c6c79840bcde9ba77b19f6218f7738188115e27830cbaff43264bc4ed24c429d"},
 ]
 
 [[package]]
@@ -1441,13 +1441,13 @@ multidict = ">=4.0"
 
 [[package]]
 name = "yt-dlp"
-version = "2024.5.20.232721.dev0"
+version = "2024.5.26.232731.dev0"
 description = "A feature-rich command-line audio/video downloader"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "yt_dlp-2024.5.20.232721.dev0-py3-none-any.whl", hash = "sha256:21f030115937271103828e0100ed7e1af3b0c7cc25eaf2eb5f4bc2afe7b63035"},
-    {file = "yt_dlp-2024.5.20.232721.dev0.tar.gz", hash = "sha256:cf32fb9c3594630084426526c767bd04a26abf0902e38c06d17419e20c0507ba"},
+    {file = "yt_dlp-2024.5.26.232731.dev0-py3-none-any.whl", hash = "sha256:dd4871fa1022751d4707c909a59ec4244431274a3bc89fbba539f273756cead3"},
+    {file = "yt_dlp-2024.5.26.232731.dev0.tar.gz", hash = "sha256:c510e2c5f8a4d50d924a9c35d1d62f437a82043873d4b50783d6db97c2f9a373"},
 ]
 
 [package.dependencies]
@@ -1456,17 +1456,19 @@ brotlicffi = {version = "*", markers = "implementation_name != \"cpython\""}
 certifi = "*"
 mutagen = "*"
 pycryptodomex = "*"
-requests = ">=2.32.0,<3"
+requests = ">=2.31.0,<3"
 urllib3 = ">=1.26.17,<3"
 websockets = ">=12.0"
 
 [package.extras]
-build = ["build", "hatchling", "pip", "wheel"]
+build = ["build", "hatchling", "pip", "setuptools (>=66.1.0,<70)", "wheel"]
 curl-cffi = ["curl-cffi (==0.5.10)"]
-dev = ["flake8", "isort", "pytest"]
-py2exe = ["py2exe (>=0.12)"]
+dev = ["autopep8 (>=2.0,<3.0)", "pre-commit", "pytest (>=8.1,<9.0)", "ruff (>=0.4.4,<0.5.0)"]
+py2exe = ["py2exe (>=0.12)", "requests (==2.31.*)"]
 pyinstaller = ["pyinstaller (==5.13.2)", "pyinstaller (>=6.3)"]
 secretstorage = ["cffi", "secretstorage"]
+static-analysis = ["autopep8 (>=2.0,<3.0)", "ruff (>=0.4.4,<0.5.0)"]
+test = ["pytest (>=8.1,<9.0)"]
 
 [metadata]
 lock-version = "2.0"
