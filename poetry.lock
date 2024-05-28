@@ -1227,13 +1227,13 @@ zstd = ["zstandard (>=0.18.0)"]
 
 [[package]]
 name = "uvicorn"
-version = "0.29.0"
+version = "0.30.0"
 description = "The lightning-fast ASGI server."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "uvicorn-0.29.0-py3-none-any.whl", hash = "sha256:2c2aac7ff4f4365c206fd773a39bf4ebd1047c238f8b8268ad996829323473de"},
-    {file = "uvicorn-0.29.0.tar.gz", hash = "sha256:6a69214c0b6a087462412670b3ef21224fa48cae0e452b5883e8e8bdfdd11dd0"},
+    {file = "uvicorn-0.30.0-py3-none-any.whl", hash = "sha256:78fa0b5f56abb8562024a59041caeb555c86e48d0efdd23c3fe7de7a4075bdab"},
+    {file = "uvicorn-0.30.0.tar.gz", hash = "sha256:f678dec4fa3a39706bbf49b9ec5fc40049d42418716cea52b53f07828a60aa37"},
 ]
 
 [package.dependencies]
@@ -1441,13 +1441,13 @@ multidict = ">=4.0"
 
 [[package]]
 name = "yt-dlp"
-version = "2024.5.26.232731.dev0"
+version = "2024.5.27.232744.dev0"
 description = "A feature-rich command-line audio/video downloader"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "yt_dlp-2024.5.26.232731.dev0-py3-none-any.whl", hash = "sha256:dd4871fa1022751d4707c909a59ec4244431274a3bc89fbba539f273756cead3"},
-    {file = "yt_dlp-2024.5.26.232731.dev0.tar.gz", hash = "sha256:c510e2c5f8a4d50d924a9c35d1d62f437a82043873d4b50783d6db97c2f9a373"},
+    {file = "yt_dlp-2024.5.27.232744.dev0-py3-none-any.whl", hash = "sha256:4fae014aaee7a0c03e41aa7a6d0726817b4e794fc4e5697f9b5285e60efa7afc"},
+    {file = "yt_dlp-2024.5.27.232744.dev0.tar.gz", hash = "sha256:7447a4903662c9eead00a595eeabf00c2dfc6274834538a89085ef2fb842da2a"},
 ]
 
 [package.dependencies]
@@ -1473,4 +1473,4 @@ test = ["pytest (>=8.1,<9.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "e18003b61a29b67ca156e533ce645353ecbbb1b2164dad70e8fda7648e1f5d45"
+content-hash = "4eb6a59b7ac3a2f63e60b12f664a8f02bbb86b4e171756adbb7b4af767790c7d"
