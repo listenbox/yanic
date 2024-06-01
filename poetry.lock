@@ -1441,13 +1441,13 @@ multidict = ">=4.0"
 
 [[package]]
 name = "yt-dlp"
-version = "2024.5.29.232700.dev0"
+version = "2024.5.30.232720.dev0"
 description = "A feature-rich command-line audio/video downloader"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "yt_dlp-2024.5.29.232700.dev0-py3-none-any.whl", hash = "sha256:38b6846d5001bcd775040ac39d668c1eb57131951408c858465c3f7ea2a5c205"},
-    {file = "yt_dlp-2024.5.29.232700.dev0.tar.gz", hash = "sha256:ef5fa5f03107c702d89aeb208dcc0ef2820c5ab7f8d5627906699129801b6719"},
+    {file = "yt_dlp-2024.5.30.232720.dev0-py3-none-any.whl", hash = "sha256:d6e563a2923807392325722028e7792e35affb694a505617b008195d0d212d2c"},
+    {file = "yt_dlp-2024.5.30.232720.dev0.tar.gz", hash = "sha256:9e2b177c5b13ea6f54cee1c56a69dd7832d506fba73a2247c6470e7d1952f959"},
 ]
 
 [package.dependencies]
@@ -1461,11 +1461,11 @@ urllib3 = ">=1.26.17,<3"
 websockets = ">=12.0"
 
 [package.extras]
-build = ["build", "hatchling", "pip", "setuptools (>=66.1.0,<70)", "wheel"]
+build = ["build", "hatchling", "pip", "setuptools", "wheel"]
 curl-cffi = ["curl-cffi (==0.5.10)"]
 dev = ["autopep8 (>=2.0,<3.0)", "pre-commit", "pytest (>=8.1,<9.0)", "ruff (>=0.4.4,<0.5.0)"]
 py2exe = ["py2exe (>=0.12)", "requests (==2.31.*)"]
-pyinstaller = ["pyinstaller (==5.13.2)", "pyinstaller (>=6.3)"]
+pyinstaller = ["pyinstaller (>=6.7.0)"]
 secretstorage = ["cffi", "secretstorage"]
 static-analysis = ["autopep8 (>=2.0,<3.0)", "ruff (>=0.4.4,<0.5.0)"]
 test = ["pytest (>=8.1,<9.0)"]
