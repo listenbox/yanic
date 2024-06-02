@@ -51,19 +51,11 @@ def responsible(client, openapi) -> Responsible:
     return Responsible(client, openapi)
 
 
-SKIP_ANDROID = {
-    'youtube': {
-        'player_client': ['ios', 'web'],
-    },
-}
-
-
 def info_opts(ext: str, proxy: Optional[str] = None):
     return {
         "format": f"bestaudio[ext={ext}]/best[ext={ext}]",
         "proxy": proxy,
         "extractor_retries": 0,
-        'extractor_args': SKIP_ANDROID,
     }
 
 
@@ -76,13 +68,18 @@ def download_opts(file: str, proxy: Optional[str] = None):
         'postprocessors': [
             {
                 'key': 'FFmpegExtractAudio',
-            }
+            },
+            {
+                'key': 'FFmpegMetadata',
+                "add_metadata": False,
+                "add_infojson": False,
+                "add_chapters": True,
+            },
         ],
         "outtmpl": file,
         "max_downloads": 1,
         "proxy": proxy,
         "extractor_retries": 0,
-        'extractor_args': SKIP_ANDROID,
     }
 
 
@@ -193,3 +190,32 @@ async def test_smallest_playlist(responsible):
     entries = b['entries']
     assert len(entries) == 2
     assert all(isinstance(x['timestamp'], int) for x in entries)
+
+
+@pytest.mark.asyncio_cooperative
+async def test_embed_chapters(responsible, tmp_path_factory):
+    tmp_path = tmp_path_factory.mktemp("tmp")
+    video_with_chapters = "https://www.youtube.com/watch?v=b1Fo_M_tj6w"
+    resp = await responsible.check(
+        RRequest(
+            "POST",
+            "/info",
+            json={"url": video_with_chapters, "opts": info_opts(ext="m4a")},
+        ),
+        status=200
+    )
+
+    file = os.path.join(tmp_path, "out.m4a")
+    await responsible.check(
+        RRequest("POST", "/download", json={"info": await resp.json(), "opts": download_opts(file=file)}),
+        status=200,
+    )
+
+    metadata_file = os.path.join(tmp_path, "metadata.txt")
+
+    cmd = f"ffmpeg -i {file} -f ffmetadata {metadata_file}"
+    os.system(cmd)
+
+    with open(metadata_file) as f:
+        metadata = f.read()
+        assert "[CHAPTER]" in metadata
