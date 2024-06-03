@@ -2,18 +2,18 @@ version: "3"
 
 tasks:
   api:
-    cmd: bunx @responsibleapi/cli@0.3.11 yanic.kdl -o openapi.json
+    cmd: bunx @responsibleapi/cli yanic.kdl -o openapi.json
     sources:
       - yanic.kdl
       - Taskfile.dist.yml
-    generates: [ openapi.json ]
+    generates: [openapi.json]
 
   tests:
-    deps: [ api ]
+    deps: [api]
     cmd: poetry run pytest
     sources:
-      - yanic/
-      - tests/
+      - yanic/**/*
+      - tests/**/*
       - poetry.lock
       - openapi.json
 
@@ -26,7 +26,7 @@ tasks:
       - poetry show --outdated
       - poetry update
       - poetry install --sync
-    generates: [ poetry.lock ]
+    generates: [poetry.lock]
 
   build:
     vars:
@@ -40,12 +40,12 @@ tasks:
       - docker cp "{{.container_name}}:/app/yanic.pyz" "./yanic.pyz"
     sources:
       - Taskfile.dist.yml
-      - yanic/
+      - yanic/**/*
       - pyproject.toml
       - poetry.lock
-      - docker/
-    generates: [ yanic.pyz ]
+      - docker/**/*
+    generates: [yanic.pyz]
 
   schemathesis:
-    deps: [ api ]
+    deps: [api]
     cmd: poetry run st run --checks all --base-url http://localhost:8006 --workers 40 ./openapi.json
