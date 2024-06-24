@@ -1,6 +1,6 @@
 # Yanic
 
-Async [yt-dlp](https://github.com/yt-dlp/yt-dlp) server
+[yt-dlp](https://github.com/yt-dlp/yt-dlp) HTTP server
 
 [HTTP protocol](yanic.kdl)
 
