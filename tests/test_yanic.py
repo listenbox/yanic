@@ -116,6 +116,7 @@ async def test_has_abr(responsible):
     assert "abr" in info
 
 
+@pytest.mark.skip("ig asks for login")
 @pytest.mark.asyncio_cooperative
 async def test_instagram_tv(responsible):
     req = RRequest("POST", "/info", json={"url": "https://www.instagram.com/tv/CCwKLP8oAbB", "opts": info_opts("mp4")})
