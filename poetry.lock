@@ -1441,13 +1441,13 @@ multidict = ">=4.0"
 
 [[package]]
 name = "yt-dlp"
-version = "2024.6.27.232805.dev0"
+version = "2024.6.29.232730.dev0"
 description = "A feature-rich command-line audio/video downloader"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "yt_dlp-2024.6.27.232805.dev0-py3-none-any.whl", hash = "sha256:4d97b2bef30af27899bd9ae7f3b31364c8c7125c89453a4541cc2828bf286982"},
-    {file = "yt_dlp-2024.6.27.232805.dev0.tar.gz", hash = "sha256:b558f765803a498f194487f66a42f99ba0cc1491012e25215ebce0ca2a7d253b"},
+    {file = "yt_dlp-2024.6.29.232730.dev0-py3-none-any.whl", hash = "sha256:88feb16614f9cbb894ecb651c32d8c0687407d6fa2363da9ef76934b1b3ccb97"},
+    {file = "yt_dlp-2024.6.29.232730.dev0.tar.gz", hash = "sha256:523e581beaae2df49a97d988b1833201826032cb79e6c30e9d3a3d1c222a2f93"},
 ]
 
 [package.dependencies]
@@ -1463,11 +1463,11 @@ websockets = ">=12.0"
 [package.extras]
 build = ["build", "hatchling", "pip", "setuptools", "wheel"]
 curl-cffi = ["curl-cffi (==0.5.10)"]
-dev = ["autopep8 (>=2.0,<3.0)", "pre-commit", "pytest (>=8.1,<9.0)", "ruff (>=0.4.4,<0.5.0)"]
+dev = ["autopep8 (>=2.0,<3.0)", "pre-commit", "pytest (>=8.1,<9.0)", "ruff (>=0.5.0,<0.6.0)"]
 py2exe = ["py2exe (>=0.12)"]
 pyinstaller = ["pyinstaller (>=6.7.0)"]
 secretstorage = ["cffi", "secretstorage"]
-static-analysis = ["autopep8 (>=2.0,<3.0)", "ruff (>=0.4.4,<0.5.0)"]
+static-analysis = ["autopep8 (>=2.0,<3.0)", "ruff (>=0.5.0,<0.6.0)"]
 test = ["pytest (>=8.1,<9.0)"]
 
 [metadata]
