@@ -1246,14 +1246,17 @@ standard = ["colorama (>=0.4)", "httptools (>=0.5.0)", "python-dotenv (>=0.13)",
 
 [[package]]
 name = "validators"
-version = "0.28.3"
+version = "0.29.0"
 description = "Python Data Validation for Humans™"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "validators-0.28.3-py3-none-any.whl", hash = "sha256:53cafa854f13850156259d9cc479b864ee901f6a96e6b109e6fc33f98f37d99f"},
-    {file = "validators-0.28.3.tar.gz", hash = "sha256:c6c79840bcde9ba77b19f6218f7738188115e27830cbaff43264bc4ed24c429d"},
+    {file = "validators-0.29.0-py3-none-any.whl", hash = "sha256:31a8285ca8889347babad77cc541f0b88e95b30553ca5f69b1d3ae4351587e3e"},
+    {file = "validators-0.29.0.tar.gz", hash = "sha256:7c8c599ea8128a6425ecb3f0da9ee10dd22b3d41b2f89560383761abf39de4df"},
 ]
+
+[package.extras]
+crypto-eth-addresses = ["eth-hash[pycryptodome] (>=0.7.0)"]
 
 [[package]]
 name = "websockets"
@@ -1441,13 +1444,13 @@ multidict = ">=4.0"
 
 [[package]]
 name = "yt-dlp"
-version = "2024.7.1.232715.dev0"
+version = "2024.7.2.232715.dev0"
 description = "A feature-rich command-line audio/video downloader"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "yt_dlp-2024.7.1.232715.dev0-py3-none-any.whl", hash = "sha256:e9ab443353da0c8f01587b031fb84b2cc42eae82aeaa03a9ce5ed6edc301b503"},
-    {file = "yt_dlp-2024.7.1.232715.dev0.tar.gz", hash = "sha256:4f1ab25318c9156cca0b7308bdd2aeb3e7f01e8d9fb83916b4719010038170c8"},
+    {file = "yt_dlp-2024.7.2.232715.dev0-py3-none-any.whl", hash = "sha256:5a44ccb69efc815425265323376da0abca192238475bbd67ca26a9804b1bb8b6"},
+    {file = "yt_dlp-2024.7.2.232715.dev0.tar.gz", hash = "sha256:23658e2e12e066ed1a6abd7d27a2e4b70e4d1c6a4ef71d26a9f11d01adf7b278"},
 ]
 
 [package.dependencies]
@@ -1473,4 +1476,4 @@ test = ["pytest (>=8.1,<9.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "4eb6a59b7ac3a2f63e60b12f664a8f02bbb86b4e171756adbb7b4af767790c7d"
+content-hash = "2c1c7ad3572e92f3e62e3a966293b00bcf43c54b753ce0fb36c8e304891a22d5"
