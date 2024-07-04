@@ -17,4 +17,5 @@ def youtube_download(info: Info, opts: Opts) -> None:
         with YoutubeDL(opts) as ydl:
             ydl.process_ie_result(info, download=True)
     except MaxDownloadsReached:
+        # success
         return

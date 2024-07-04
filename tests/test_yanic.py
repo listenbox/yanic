@@ -11,7 +11,7 @@ from aiohttp import ClientSession
 from responsible import OpenApiDict, RRequest, Responsible
 
 
-def _start_server(port: int):
+def __start_server(port: int):
     uvicorn.run(app="yanic.server:app", port=port, access_log=False, workers=4)
 
 
@@ -20,7 +20,7 @@ def server() -> int:
     # port = randrange(8000, 9000)
     port = 8006
 
-    proc = Process(target=_start_server, args=[port])
+    proc = Process(target=__start_server, args=[port])
     proc.start()
 
     yield port

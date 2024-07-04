@@ -3,8 +3,8 @@ import os
 import time
 from dataclasses import dataclass
 
-import uvicorn
 import blacksheep
+import uvicorn
 
 from yanic.ytdl import youtube_info, youtube_download, Opts, Info
 
@@ -12,7 +12,7 @@ logging.basicConfig(level=logging.NOTSET)
 logger = logging.getLogger("  ")
 
 
-async def _log_res_time(req: blacksheep.Request, handler):
+async def __log_res_time(req: blacksheep.Request, handler):
     start_sec = time.time()
 
     res: blacksheep.Response = await handler(req)
@@ -29,18 +29,18 @@ app = blacksheep.Application()
 
 
 @blacksheep.get("/health")
-def _health() -> blacksheep.Response:
+def __health() -> blacksheep.Response:
     return blacksheep.no_content()
 
 
 @dataclass
-class _InfoReq:
+class __InfoReq:
     url: str
     opts: Opts = None
 
 
 @blacksheep.post("/info")
-def _info(req: blacksheep.FromJSON[_InfoReq]) -> blacksheep.Response:
+def __info(req: blacksheep.FromJSON[__InfoReq]) -> blacksheep.Response:
     try:
         info = youtube_info(req.value.url, req.value.opts)
         return blacksheep.json(info, status=200)
@@ -49,7 +49,7 @@ def _info(req: blacksheep.FromJSON[_InfoReq]) -> blacksheep.Response:
 
 
 @blacksheep.get("/info")
-def _get_info(url: blacksheep.FromQuery[str]) -> blacksheep.Response:
+def __get_info(url: blacksheep.FromQuery[str]) -> blacksheep.Response:
     try:
         info = youtube_info(url.value, opts=None)
         return blacksheep.json(info, status=200)
@@ -58,13 +58,13 @@ def _get_info(url: blacksheep.FromQuery[str]) -> blacksheep.Response:
 
 
 @dataclass
-class _DownloadReq:
+class __DownloadReq:
     info: Info
     opts: Opts = None
 
 
 @blacksheep.post("/download")
-def _download(req: blacksheep.FromJSON[_DownloadReq]) -> blacksheep.Response:
+def __download(req: blacksheep.FromJSON[__DownloadReq]) -> blacksheep.Response:
     try:
         youtube_download(req.value.info, req.value.opts)
         return blacksheep.json("ok", status=200)
@@ -72,7 +72,7 @@ def _download(req: blacksheep.FromJSON[_DownloadReq]) -> blacksheep.Response:
         return blacksheep.text(str(err), status=422)
 
 
-app.middlewares.append(_log_res_time)
+app.middlewares.append(__log_res_time)
 
 
 def main() -> None:
