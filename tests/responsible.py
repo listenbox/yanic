@@ -90,7 +90,6 @@ class Responsible:
     def __init__(self, session: ClientSession, openapi: OpenApiDict):
         self.client = session
         self.openapi = OpenAPI.from_dict(openapi)
-        self.openapi.check_spec()
 
     async def check(self, req: RRequest, status: int) -> ClientResponse:
         """TODO flatten req struct"""
