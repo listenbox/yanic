@@ -2,14 +2,13 @@ import asyncio
 import json
 import os
 from multiprocessing import Process
-from random import randrange
 from typing import Optional
 
 import pytest
 import uvicorn
 from aiohttp import ClientSession
 
-from responsible import OpenAPI, RRequest, Responsible
+from responsible import OpenApiDict, RRequest, Responsible
 
 
 def _start_server(port: int):
@@ -18,7 +17,8 @@ def _start_server(port: int):
 
 @pytest.fixture(scope="module")
 def server() -> int:
-    port = randrange(8000, 9000)
+    # port = randrange(8000, 9000)
+    port = 8006
 
     proc = Process(target=_start_server, args=[port])
     proc.start()
@@ -41,7 +41,7 @@ async def client(server) -> ClientSession:
 
 
 @pytest.fixture(scope='module')
-def openapi() -> OpenAPI:
+def openapi() -> OpenApiDict:
     with open(next(filter(os.path.exists, ["openapi.json", "../openapi.json"]))) as f:
         return json.load(f)
 

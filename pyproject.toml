@@ -9,7 +9,7 @@ python = "^3.10"
 
 blacksheep = "^2.0.7"
 uvicorn = "^0.30.0"
-yt-dlp = {version = "^2024.05.04.232706.dev0", allow-prereleases = true}
+yt-dlp = { version = "^2024.05.04.232706.dev0", allow-prereleases = true }
 
 # because uvicorn:    https://github.com/encode/uvicorn/blob/master/uvicorn/_types.py
 # because blacksheep: https://github.com/Neoteroi/BlackSheep/blob/main/blacksheep/asgi.pyi
@@ -19,8 +19,7 @@ typing-extensions = "^4.11.0"
 aiohttp = "^3.8.1"
 pytest = "^8.0.0"
 pytest-asyncio-cooperative = "^0.37.0"
-# schemathesis = "^3.19.5"
-validators = "^0.30.0"
+openapi-core = "^0.19.2"
 
 [tool.poetry.group.build.dependencies]
 shiv = "^1.0.5"
