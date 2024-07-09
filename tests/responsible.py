@@ -14,12 +14,12 @@ OpenApiDict = Dict[str, Any]
 class RRequest:
     method: Literal["GET", "POST"]
     path: str
-    json: Any = None
+    json: Optional[Dict[str, Any]] = None
     headers: Optional[Dict[str, Any]] = None
 
 
 @dataclass
-class __AioReq(Request):
+class _AioReq(Request):
     req: RequestInfo
     data: bytes
 
@@ -45,7 +45,7 @@ class __AioReq(Request):
 
 
 @dataclass
-class __AioRes(Response):
+class _AioRes(Response):
     res: ClientResponse
     body: bytes
 
@@ -66,23 +66,6 @@ class __AioRes(Response):
         return CIMultiDict(self.res.headers)
 
 
-async def _responsible(
-        openapi: OpenAPI,
-        session: ClientSession,
-        req: RRequest,
-        status: int,
-) -> ClientResponse:
-    async with session.request(req.method, req.path, headers=req.headers, json=req.json) as res:
-        openapi.validate_response(
-            request=__AioReq(req=res.request_info, data=json.dumps(req.json).encode("utf-8")),
-            response=__AioRes(res, body=await res.read()),
-        )
-
-        assert res.status == status, f"expected {status} but got {res.status}"
-
-        return res
-
-
 class Responsible:
     openapi: OpenAPI
     client: ClientSession
@@ -92,5 +75,12 @@ class Responsible:
         self.openapi = OpenAPI.from_dict(openapi)
 
     async def check(self, req: RRequest, status: int) -> ClientResponse:
-        """TODO flatten req struct"""
-        return await _responsible(self.openapi, self.client, req, status)
+        async with self.client.request(req.method, req.path, headers=req.headers, json=req.json) as res:
+            self.openapi.validate_response(
+                request=_AioReq(req=res.request_info, data=json.dumps(req.json).encode("utf-8")),
+                response=_AioRes(res, body=await res.read()),
+            )
+
+            assert res.status == status, f"expected {status} but got {res.status}"
+
+            return res
