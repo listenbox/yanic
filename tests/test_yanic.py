@@ -56,7 +56,7 @@ def info_opts(ext: str, proxy: Optional[str] = None):
         "format": f"bestaudio[ext={ext}]/best[ext={ext}]",
         "proxy": proxy,
         "extractor_retries": 0,
-        "cookiefile": "cookies.txt",
+        "cookiefile": "tests/cookies.txt",
     }
 
 
@@ -81,7 +81,7 @@ def download_opts(file: str, proxy: Optional[str] = None):
         "max_downloads": 1,
         "proxy": proxy,
         "extractor_retries": 0,
-        "cookiefile": "cookies.txt",
+        "cookiefile": "tests/cookies.txt",
     }
 
 

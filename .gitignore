@@ -10,4 +10,5 @@ openapi.json
 yanic.pyz
 Taskfile.yml
 .task/
-cookies.txt
+
+tests/cookies.txt
