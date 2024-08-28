@@ -1859,13 +1859,13 @@ multidict = ">=4.0"
 
 [[package]]
 name = "yt-dlp"
-version = "2024.8.6"
+version = "2024.8.26.232811.dev0"
 description = "A feature-rich command-line audio/video downloader"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "yt_dlp-2024.8.6-py3-none-any.whl", hash = "sha256:ab507ff600bd9269ad4d654e309646976778f0e243eaa2f6c3c3214278bb2922"},
-    {file = "yt_dlp-2024.8.6.tar.gz", hash = "sha256:e8551f26bc8bf67b99c12373cc87ed2073436c3437e53290878d0f4b4bb1f663"},
+    {file = "yt_dlp-2024.8.26.232811.dev0-py3-none-any.whl", hash = "sha256:5b6becc5a7d0b4cd9c71c755aeecec004b8892c45fc6509b41cab76423d176cf"},
+    {file = "yt_dlp-2024.8.26.232811.dev0.tar.gz", hash = "sha256:b1fa052ad0de4885b5c317368b475e093731129b888fc24bf5458c0ec4c6c866"},
 ]
 
 [package.dependencies]
@@ -1876,7 +1876,7 @@ mutagen = "*"
 pycryptodomex = "*"
 requests = ">=2.32.2,<3"
 urllib3 = ">=1.26.17,<3"
-websockets = ">=12.0"
+websockets = ">=13.0"
 
 [package.extras]
 build = ["build", "hatchling", "pip", "setuptools (>=71.0.2)", "wheel"]
@@ -1891,4 +1891,4 @@ test = ["pytest (>=8.1,<9.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "0911a822f78cb20ed61c54a2d589b1ba6d751c6e6ca6e671f1a7f1ee7b6d5fca"
+content-hash = "8530bc3951313fd323d6d6ef4823cc8ab82c4a6701dc81cfc4340363956543cb"
