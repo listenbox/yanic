@@ -83,5 +83,5 @@ def main() -> None:
         limit_max_requests=10_000,
         access_log=False,
         log_level=logging.INFO,
-        workers=12,
+        workers=20,
     )
