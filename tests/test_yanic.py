@@ -97,8 +97,10 @@ def playlist_opts(proxy: Optional[str] = None, limit: int = 500):
 
 @pytest.mark.asyncio_cooperative
 async def test_incomplete_youtube_id(responsible):
-    req = RRequest("POST", "/info",
-                   json={"url": "https://www.youtube.com/watch?v=bigXuLv7lN", "opts": info_opts("m4a")})
+    req = RRequest("POST", "/info", json={
+        "url": "https://www.youtube.com/watch?v=bigXuLv7lN",
+        "opts": info_opts("m4a")
+    })
     res = await responsible.check(req, status=422)
 
     assert "Incomplete YouTube ID" in await res.text()
@@ -119,7 +121,10 @@ async def test_has_abr(responsible):
 @pytest.mark.skip("ig asks for login")
 @pytest.mark.asyncio_cooperative
 async def test_instagram_tv(responsible):
-    req = RRequest("POST", "/info", json={"url": "https://www.instagram.com/tv/CCwKLP8oAbB", "opts": info_opts("mp4")})
+    req = RRequest("POST", "/info", json={
+        "url": "https://www.instagram.com/tv/CCwKLP8oAbB",
+        "opts": info_opts("mp4"),
+    })
     res = await responsible.check(req, status=200)
     info = await res.json()
     assert len(info["formats"]) > 0
@@ -136,11 +141,10 @@ async def test_invalid_download(responsible):
 async def test_download(tmp_path_factory, responsible):
     tmp_path = tmp_path_factory.mktemp("tmp")
     resp = await responsible.check(
-        RRequest(
-            "POST",
-            "/info",
-            json={"url": "https://www.youtube.com/watch?v=UO_QuXr521I", "opts": info_opts(ext="m4a")},
-        ),
+        RRequest("POST", "/info", json={
+            "url": "https://www.youtube.com/watch?v=UO_QuXr521I",
+            "opts": info_opts(ext="m4a")
+        }),
         status=200
     )
 
