@@ -20,7 +20,7 @@ tasks:
   start:
     - poetry run uvicorn yanic.server:app --reload --port 8006 --no-access-log
 
-  poetry:
+  deps:
     cmds:
       - poetry lock
       - poetry show --outdated
