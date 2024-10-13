@@ -8,7 +8,7 @@ tasks:
       - Taskfile.dist.yml
     generates: [openapi.json]
 
-  tests:
+  test:
     deps: [api]
     cmd: poetry run pytest
     sources:
