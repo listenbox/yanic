@@ -76,11 +76,11 @@ app.middlewares.append(__log_res_time)
 
 
 def main() -> None:
-    port = int(os.environ.get('PORT', '8006'))
+    port = int(os.environ.get("PORT", "8006"))
     uvicorn.run(
         app="yanic.server:app",
         port=port,
-        limit_max_requests=10_000,
+        limit_max_requests=100,
         access_log=False,
         log_level=logging.INFO,
         workers=25,
