@@ -69,6 +69,7 @@ def __download(req: blacksheep.FromJSON[__DownloadReq]) -> blacksheep.Response:
         youtube_download(req.value.info, req.value.opts)
         return blacksheep.json("ok", status=200)
     except Exception as err:
+        logger.exception(req.value.info["webpage_url"] if "webpage_url" in req.value.info else req.value.info)
         return blacksheep.text(str(err), status=422)
 
 
@@ -80,7 +81,7 @@ def main() -> None:
     uvicorn.run(
         app="yanic.server:app",
         port=port,
-        limit_max_requests=100,
+        limit_max_requests=25,
         access_log=False,
         log_level=logging.INFO,
         workers=25,
