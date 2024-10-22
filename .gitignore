@@ -12,3 +12,4 @@ Taskfile.yml
 .task/
 
 tests/cookies.txt
+webshare.txt

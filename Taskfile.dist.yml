@@ -6,10 +6,12 @@ tasks:
     sources:
       - yanic.kdl
       - Taskfile.dist.yml
-    generates: [openapi.json]
+    generates:
+      - openapi.json
 
   test:
-    deps: [api]
+    deps:
+      - api
     cmd: poetry run pytest
     sources:
       - yanic/**/*
@@ -26,7 +28,8 @@ tasks:
       - poetry show --outdated
       - poetry update
       - poetry install --sync
-    generates: [poetry.lock]
+    generates:
+      - poetry.lock
 
   build:
     vars:
@@ -44,8 +47,10 @@ tasks:
       - pyproject.toml
       - poetry.lock
       - docker/**/*
-    generates: [yanic.pyz]
+    generates:
+      - yanic.pyz
 
   schemathesis:
-    deps: [api]
+    deps:
+      - api
     cmd: poetry run st run --checks all --base-url http://localhost:8006 --workers 40 ./openapi.json
