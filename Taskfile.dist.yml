@@ -38,7 +38,7 @@ tasks:
     cmds:
       - docker build -t "{{.image_name}}" docker/
       - docker run -d --name "{{.container_name}}" -v "./":/app "{{.image_name}}"
-      - defer: docker rm -f "{{.container_name}}"
+      - defer: docker rm -f -v "{{.container_name}}"
       - docker exec "{{.container_name}}" /bin/bash -c "cd app/ && docker/container.sh"
       - docker cp "{{.container_name}}:/app/yanic.pyz" "./yanic.pyz"
     sources:
