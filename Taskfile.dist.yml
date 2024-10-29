@@ -42,11 +42,11 @@ tasks:
       - docker exec "{{.container_name}}" /bin/bash -c "cd app/ && docker/container.sh"
       - docker cp "{{.container_name}}:/app/yanic.pyz" "./yanic.pyz"
     sources:
+      - docker/**/*
       - Taskfile.dist.yml
       - yanic/**/*
       - pyproject.toml
       - poetry.lock
-      - docker/**/*
     generates:
       - yanic.pyz
 
