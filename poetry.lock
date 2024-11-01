@@ -1505,13 +1505,13 @@ standard = ["colorama (>=0.4)", "httptools (>=0.5.0)", "python-dotenv (>=0.13)",
 
 [[package]]
 name = "werkzeug"
-version = "3.0.6"
+version = "3.1.0"
 description = "The comprehensive WSGI web application library."
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.9"
 files = [
-    {file = "werkzeug-3.0.6-py3-none-any.whl", hash = "sha256:1bc0c2310d2fbb07b1dd1105eba2f7af72f322e1e455f2f93c993bee8c8a5f17"},
-    {file = "werkzeug-3.0.6.tar.gz", hash = "sha256:a8dd59d4de28ca70471a34cba79bed5f7ef2e036a76b3ab0835474246eb41f8d"},
+    {file = "werkzeug-3.1.0-py3-none-any.whl", hash = "sha256:208a2e31a4a54c8b3d2244f2079ca1d3851629a7a7d546646059c64fb746023a"},
+    {file = "werkzeug-3.1.0.tar.gz", hash = "sha256:6f2a0d38f25ba5a75c36c45b4ae350c7a23b57e3b974e9eb2d6851f2c648c00d"},
 ]
 
 [package.dependencies]
@@ -1618,13 +1618,13 @@ propcache = ">=0.2.0"
 
 [[package]]
 name = "yt-dlp"
-version = "2024.10.29.232854.dev0"
+version = "2024.10.31.232951.dev0"
 description = "A feature-rich command-line audio/video downloader"
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "yt_dlp-2024.10.29.232854.dev0-py3-none-any.whl", hash = "sha256:715b263b686b7baa313f1dccd4c6f993cbea6f51b85c266a24ccf05a9755e5b6"},
-    {file = "yt_dlp-2024.10.29.232854.dev0.tar.gz", hash = "sha256:ee4427db33b42e10680f5e3913311f6f4ade70a882fb36285623d849de26409b"},
+    {file = "yt_dlp-2024.10.31.232951.dev0-py3-none-any.whl", hash = "sha256:7d6446c0f6b3576cb80e6756d975e49390d6f398c1cc9d8b16dc23c2d55a0b78"},
+    {file = "yt_dlp-2024.10.31.232951.dev0.tar.gz", hash = "sha256:96214ea8ae5a55886bea872524a615eecf1909be9d8fa56d47ae6ccdf2b81b20"},
 ]
 
 [package.extras]
@@ -1640,4 +1640,4 @@ test = ["pytest (>=8.1,<9.0)", "pytest-rerunfailures (>=14.0,<15.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "1e8a3339d9da3c9bb55b6741ba45d914602284fd6823311f807fadfbfdccc2eb"
+content-hash = "b5945028088f8849652e394fa2dbb3b930baad68b3720464b56a9dc209c96389"
