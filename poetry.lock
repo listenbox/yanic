@@ -1417,13 +1417,13 @@ type = ["importlib-metadata (>=7.0.2)", "jaraco.develop (>=7.21)", "mypy (==1.12
 
 [[package]]
 name = "shiv"
-version = "1.0.7"
+version = "1.0.8"
 description = "A command line utility for building fully self contained Python zipapps."
 optional = false
 python-versions = ">=3.6"
 files = [
-    {file = "shiv-1.0.7-py2.py3-none-any.whl", hash = "sha256:ef553d6a1610d8705aacf4339f6adaadb7d3b2ec22dc000d87a1c01393460f06"},
-    {file = "shiv-1.0.7.tar.gz", hash = "sha256:947757fe26383ae9eda0c576f3cba244dfa3715ed2f4993544b758245f71ab15"},
+    {file = "shiv-1.0.8-py2.py3-none-any.whl", hash = "sha256:a60e4b05a2d2f8b820d567b1d89ee59af731759771c32c282d03c4ceae6aba24"},
+    {file = "shiv-1.0.8.tar.gz", hash = "sha256:2a68d69e98ce81cb5b8fdafbfc1e27efa93e6d89ca14bfae33482e4176f561d6"},
 ]
 
 [package.dependencies]
@@ -1618,13 +1618,13 @@ propcache = ">=0.2.0"
 
 [[package]]
 name = "yt-dlp"
-version = "2024.10.31.232951.dev0"
+version = "2024.11.2.232942.dev0"
 description = "A feature-rich command-line audio/video downloader"
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "yt_dlp-2024.10.31.232951.dev0-py3-none-any.whl", hash = "sha256:7d6446c0f6b3576cb80e6756d975e49390d6f398c1cc9d8b16dc23c2d55a0b78"},
-    {file = "yt_dlp-2024.10.31.232951.dev0.tar.gz", hash = "sha256:96214ea8ae5a55886bea872524a615eecf1909be9d8fa56d47ae6ccdf2b81b20"},
+    {file = "yt_dlp-2024.11.2.232942.dev0-py3-none-any.whl", hash = "sha256:330365f4760d623934a249fe46677f5fa727bcc972e3ffe7769a0c380de2d072"},
+    {file = "yt_dlp-2024.11.2.232942.dev0.tar.gz", hash = "sha256:f4d6c7610501e828514772ea93ba3dd4f2da3fde855def3104374b39621fce50"},
 ]
 
 [package.extras]
@@ -1640,4 +1640,4 @@ test = ["pytest (>=8.1,<9.0)", "pytest-rerunfailures (>=14.0,<15.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "b5945028088f8849652e394fa2dbb3b930baad68b3720464b56a9dc209c96389"
+content-hash = "1fb9c6a1bd61e220d690177ce8429c4b13e4080fe64e3d8d56d1c68af3b7086c"
