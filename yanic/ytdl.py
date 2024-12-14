@@ -34,12 +34,12 @@ class Info(TypedDict, total=False):
     formats: List[Dict[str, Any]]
 
 
-def youtube_info(url: str, opts: Opts) -> Info:
+def youtube_info(url: str, opts: Opts | None) -> Info:
     with YoutubeDL(opts) as ydl:
         return YoutubeDL.sanitize_info(ydl.extract_info(url, download=False))
 
 
-def youtube_download(info: Info, opts: Opts) -> None:
+def youtube_download(info: Info, opts: Opts | None) -> None:
     try:
         with YoutubeDL(opts) as ydl:
             ydl.process_ie_result(info, download=True)
