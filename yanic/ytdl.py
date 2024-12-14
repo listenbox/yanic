@@ -4,16 +4,16 @@ from yt_dlp import YoutubeDL
 from yt_dlp.utils import MaxDownloadsReached
 
 
-class Postprocessor(TypedDict, total=False):
+class _Postprocessor(TypedDict, total=False):
     key: str
 
 
-class YoutubeTab(TypedDict, total=False):
+class _YoutubeTab(TypedDict, total=False):
     approximate_date: str
 
 
-class ExtractorArgs(TypedDict, total=False):
-    youtubetab: YoutubeTab
+class _ExtractorArgs(TypedDict, total=False):
+    youtubetab: _YoutubeTab
 
 
 class Opts(TypedDict, total=False):
@@ -24,8 +24,8 @@ class Opts(TypedDict, total=False):
     max_downloads: int
     extract_flat: str
     playlistend: int
-    postprocessors: List[Postprocessor]
-    extractor_args: ExtractorArgs
+    postprocessors: List[_Postprocessor]
+    extractor_args: _ExtractorArgs
 
 
 class Info(TypedDict, total=False):
