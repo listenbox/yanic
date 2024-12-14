@@ -6,7 +6,7 @@ from dataclasses import dataclass
 import blacksheep
 import uvicorn
 
-from yanic.ytdl import youtube_info, youtube_download, Opts, Info
+from yanic.ytdl import Info, Opts, youtube_download, youtube_info
 
 logging.basicConfig(level=logging.NOTSET)
 logger = logging.getLogger("  ")
@@ -69,7 +69,11 @@ def __download(req: blacksheep.FromJSON[__DownloadReq]) -> blacksheep.Response:
         youtube_download(req.value.info, req.value.opts)
         return blacksheep.json("ok", status=200)
     except Exception as err:
-        logger.exception(req.value.info["webpage_url"] if "webpage_url" in req.value.info else req.value.info)
+        logger.exception(
+            req.value.info["webpage_url"]
+            if "webpage_url" in req.value.info
+            else req.value.info
+        )
         return blacksheep.text(str(err), status=422)
 
 

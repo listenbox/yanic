@@ -1,8 +1,8 @@
 import json
 from dataclasses import dataclass
-from typing import Any, Dict, Optional, Literal
+from typing import Any, Dict, Literal, Optional
 
-from aiohttp import ClientSession, ClientResponse, RequestInfo
+from aiohttp import ClientResponse, ClientSession, RequestInfo
 from multidict import CIMultiDict
 from openapi_core import OpenAPI
 from openapi_core.protocols import Request, Response
@@ -41,7 +41,11 @@ class _AioReq(Request):
 
     @property
     def content_type(self) -> str:
-        return self.req.headers["Content-Type"]
+        return (
+            self.req.headers["Content-Type"]
+            if "Content-Type" in self.req.headers
+            else ""
+        )
 
 
 @dataclass
@@ -75,9 +79,13 @@ class Responsible:
         self.openapi = OpenAPI.from_dict(openapi)
 
     async def check(self, req: RRequest, status: int) -> ClientResponse:
-        async with self.client.request(req.method, req.path, headers=req.headers, json=req.json) as res:
+        async with self.client.request(
+            req.method, req.path, headers=req.headers, json=req.json
+        ) as res:
             self.openapi.validate_response(
-                request=_AioReq(req=res.request_info, data=json.dumps(req.json).encode("utf-8")),
+                request=_AioReq(
+                    req=res.request_info, data=json.dumps(req.json).encode("utf-8")
+                ),
                 response=_AioRes(res, body=await res.read()),
             )
 
