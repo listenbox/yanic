@@ -1,9 +1,9 @@
-from typing import Any, Optional, Dict, List
+from typing import Any, Dict, List, Optional
 
 from yt_dlp import YoutubeDL
 from yt_dlp.utils import MaxDownloadsReached
 
-Opts = None | Dict[str, Optional[str] | int | List[Dict[str, str]]]
+Opts = Dict[str, Optional[str] | int | List[Dict[str, str]]] | None
 Info = Dict[str, Any]
 
 
